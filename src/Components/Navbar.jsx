@@ -135,7 +135,7 @@ function Navbar() {
             </a>
           </div>
         </div>
-        <a href="https://primewealthcare.in/" className="btn btn-primary px-3 d-none d-lg-block "   target="_blank">
+        <a href={process.env.REACT_APP_LOGIN_LINK} className="btn btn-primary px-3 d-none d-lg-block "   target="_blank">
           Login
         </a>
       </nav>

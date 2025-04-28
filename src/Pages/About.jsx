@@ -116,7 +116,7 @@ function About() {
                   duration={5}
               />
             </h1>
-            <p className="fs-5 text-dark">Approved Claim</p>
+            <p className="fs-5 text-dark">Approved Claim Amount</p>
           </div>
           <div className="col-sm-6">
             <h1 className="display-5" data-toggle="counter-up">

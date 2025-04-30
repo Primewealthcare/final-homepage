@@ -90,7 +90,9 @@ function Navbar() {
         >
           <span className="navbar-toggler-icon"  />
         </button>
-        <div className="collapse navbar-collapse" id="navbarCollapse">
+
+        {/* old Collaps  */}
+        {/* <div className="collapse navbar-collapse" id="navbarCollapse">
           <div className="navbar-nav mx-auto  rounded pe-4 py-3 py-lg-0" >
             <a href="/" className="nav-item nav-link ">
               Home
@@ -125,9 +127,7 @@ function Navbar() {
                 <a href="/Appointment" className="dropdown-item">
                   Appointment
                 </a>
-                {/* <a href="/Leaders" className="dropdown-item">
-                  Leaders
-                </a> */}
+               
               </div>
             </div>
             <a href="/Contact" className="nav-item nav-link">
@@ -137,7 +137,55 @@ function Navbar() {
         </div>
         <a href={process.env.REACT_APP_LOGIN_LINK} className="btn btn-primary px-3 d-none d-lg-block "   target="_blank">
           Login
-        </a>
+        </a> */}
+
+        {/* New Collaps  */}
+        <div className="collapse navbar-collapse" id="navbarCollapse">
+  <div className="navbar-nav mx-auto rounded pe-4 py-3 py-lg-0">
+    <a href="/" className="nav-item nav-link">Home</a>
+    <a href="/About" className="nav-item nav-link">About Us</a>
+    <a href="/Service" className="nav-item nav-link">Our Services</a>
+
+    <div className="nav-item dropdown">
+      <a
+        href="#"
+        className="nav-link dropdown-toggle"
+        data-bs-toggle="dropdown"
+      >
+        Pages
+      </a>
+      <div className="dropdown-menu bg-light border-0 m-0">
+        <a href="/Features" className="dropdown-item">Features</a>
+        <a href="/Events" className="dropdown-item">Our Events</a>
+        <a href="/Company" className="dropdown-item">Insurance Partners</a>
+        <a href="/Team" className="dropdown-item">Team Members</a>
+        <a href="/Appointment" className="dropdown-item">Appointment</a>
+      </div>
+    </div>
+
+    <a href="/Contact" className="nav-item nav-link">Contact Us</a>
+
+    {/* Login button visible in collapsed mode */}
+    <a
+      href="https://primewealthcare.in/"
+      className="btn btn-primary px-3 d-lg-none mt-3 w-50"
+      target="_blank"
+    >
+      Login
+    </a>
+  </div>
+</div>
+
+{/* Login button visible in full (large) mode */}
+<a
+  href="https://primewealthcare.in/"
+  className="btn btn-primary px-3 d-none d-lg-block"
+  target="_blank"
+>
+  Login
+</a>
+
+
       </nav>
 
       {/* Navbar End  */}

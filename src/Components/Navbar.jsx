@@ -5,20 +5,60 @@ import facebook from "../IMG/facebook.png";
 import instagram from "../IMG/instagram.png";
 import linkedin from "../IMG/linkedin.png";
 import youtube from "../IMG/youtube.png";
+import {
+  Phone,
+  Mail,
+  Clock,
+  Facebook,
+  Youtube,
+  Linkedin,
+  Instagram,
+} from "lucide-react";
 
 function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const socialStyle = {
+    width: "32px",
+    height: "32px",
+    borderRadius: "50%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    background: "rgba(255,255,255,0.18)",
+    color: "white",
+    transition: "all 0.25s ease",
+  };
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    // Glass effect trigger
+    setScrolled(currentScrollY > 50);
+
+    // Ignore tiny scrolls (prevents flicker)
+    if (Math.abs(currentScrollY - lastScrollY) < 10) return;
+
+    // Hide on scroll down, show on scroll up
+    if (currentScrollY > lastScrollY && currentScrollY > 120) {
+      setShowNavbar(false);
+    } else {
+      setShowNavbar(true);
+    }
+
+    setLastScrollY(currentScrollY);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, [lastScrollY]);
+
 
   const dropdownItems = [
     { name: "Features", href: "/Features" },
@@ -28,85 +68,98 @@ function Navbar() {
     { name: "Appointment", href: "/Appointment" },
   ];
 
-
   return (
     <>
       {/* Topbar start */}
       <div
-        style={{ backgroundColor: "#309083ff" }}
-        className="container-fluid text-white py-2 px-0 d-none d-lg-block"
+        className="container-fluid d-none d-lg-block"
+        style={{
+          background: "rgba(39,108,99,0.92)",
+          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: "blur(10px)",
+        }}
       >
-        <div className="row gx-0 align-items-center">
-          <div
-            className="col-lg-7 px-5 text-start"
-            style={{
-              textShadow: "2px 2px 2px #000000",
-              wordSpacing: "1px",
-              letterSpacing: "1px",
-            }}
-          >
-            <div className="h-100 d-inline-flex align-items-center me-4">
-              <small className="fa fa-phone-alt me-2" />
-              <small>
-                <a href="tel:+91 9104105104" className="text-light mb-0">
-                  +91 9 104 105 104
-                </a>
-              </small>
+        <div
+          className="row gx-0 align-items-center px-5"
+          style={{ height: "46px", color: "white", fontSize: "0.9rem" }}
+        >
+          {/* LEFT INFO */}
+          <div className="col-lg-7 d-flex align-items-center gap-4">
+            <div className="d-flex align-items-center gap-2">
+              <Phone size={16} />
+              <a
+                href="tel:+919104105104"
+                className="text-white text-decoration-none"
+              >
+                +91 91041 05104
+              </a>
             </div>
-            <div className="h-100 d-inline-flex align-items-center me-4">
-              <small className="far fa-envelope-open me-2" />
-              <small>
-                <a
-                  href="mailto:himashah_hr@primewealthcare.com"
-                  style={{ color: "white" }}
-                >
-                  primewealthcare.com
-                </a>
-              </small>
+
+            <span style={{ opacity: 0.35 }}>|</span>
+
+            <div className="d-flex align-items-center gap-2">
+              <Mail size={16} />
+              <a
+                href="mailto:himashah_hr@primewealthcare.com"
+                className="text-white text-decoration-none"
+              >
+                primewealthcare.com
+              </a>
             </div>
-            <div className="h-100 d-inline-flex align-items-center me-4">
-              <small className="far fa-clock me-2" />
-              <small> Mon - Sat : 09:30 AM - 06:30 PM </small>
+
+            <span style={{ opacity: 0.35 }}>|</span>
+
+            <div className="d-flex align-items-center gap-2">
+              <Clock size={16} />
+              <span>Mon–Sat · 9:30–6:30</span>
             </div>
           </div>
-          <div className="col-lg-5 px-5 text-end">
-            <div className="h-100 d-inline-flex align-items-center">
-              <a
-                className="text-white ms-4"
-                href="https://www.facebook.com/primewealthcaresolution/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={facebook} height="28px" alt="" />
-              </a>
-              <a
-                className="text-white ms-4"
-                href="https://www.youtube.com/@primewealthcaresolutionpvtltd"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={youtube} height="28px" alt="" />
-              </a>
-              <a
-                className="text-white ms-4"
-                href="https://www.linkedin.com/company/prime-wealthcare-solution-pvt-ltd/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={linkedin} height="28px" alt="" />
-              </a>
-              <a
-                className="text-white ms-4"
-                href="https://www.instagram.com/primewealthcare_imf/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={instagram} height="30px" alt="" />
-              </a>
-            </div>
+
+          {/* RIGHT SOCIAL ICONS */}
+          <div className="col-lg-5 d-flex justify-content-end align-items-center gap-3">
+            <a
+              href="https://www.facebook.com/primewealthcaresolution/"
+              target="_blank"
+              rel="noreferrer"
+              style={{ ...socialStyle, background: "#1877F2" }}
+            >
+              <Facebook size={16} />
+            </a>
+
+            <a
+              href="https://www.youtube.com/@primewealthcaresolutionpvtltd"
+              target="_blank"
+              rel="noreferrer"
+              style={{ ...socialStyle, background: "#FF0000" }}
+            >
+              <Youtube size={16} />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/company/prime-wealthcare-solution-pvt-ltd/"
+              target="_blank"
+              rel="noreferrer"
+              style={{ ...socialStyle, background: "#0A66C2" }}
+            >
+              <Linkedin size={16} />
+            </a>
+
+            <a
+              href="https://www.instagram.com/primewealthcare_imf/"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                ...socialStyle,
+                background:
+                  "linear-gradient(45deg,#F58529,#DD2A7B,#8134AF,#515BD4)",
+              }}
+            >
+              <Instagram size={16} />
+            </a>
           </div>
         </div>
       </div>
+
       {/* Topbar End */}
 
       {/* Minimalist Navbar Start */}
@@ -144,11 +197,15 @@ function Navbar() {
           padding: "1rem 2rem",
         }}
       > */}
-      <nav className={`navbar navbar-expand-lg ${scrolled ? "scrolled" : ""}`}>
+      <nav
+  className={`navbar navbar-expand-lg 
+    ${scrolled ? "scrolled" : ""} 
+    ${showNavbar ? "nav-show" : "nav-hide"}
+  `}
+>
 
         <div className="container-fluid flex px-0">
           <div className="d-flex align-items-center navbar-inner">
-
             {/* Logo */}
             <a
               href="/"
@@ -183,7 +240,9 @@ function Navbar() {
                     className="position-relative"
                     onMouseEnter={() => setIsDropdownOpen(true)}
                     onMouseLeave={() => setIsDropdownOpen(false)}
+                    style={{ position: "relative" }}
                   >
+                    {/* Trigger */}
                     <button
                       className="nav-link d-flex align-items-center gap-1 bg-transparent border-0"
                       style={navLinkStyle}
@@ -200,63 +259,64 @@ function Navbar() {
                       />
                     </button>
 
-                    {/* Dropdown Menu */}
+                    {/* Dropdown Wrapper */}
                     <div
                       style={{
                         position: "absolute",
                         top: "100%",
-                        left: "0",
-                        marginTop: "0.75rem",
+                        left: "50%",
+                        transform: isDropdownOpen
+                          ? "translateX(-50%) translateY(0)"
+                          : "translateX(-60%) translateY(0)",
+
                         opacity: isDropdownOpen ? 1 : 0,
                         visibility: isDropdownOpen ? "visible" : "hidden",
-                        pointerEvents: isDropdownOpen ? "auto" : "none",
-                        transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                        // pointerEvents: isDropdownOpen ? "auto" : "none",
+                        transition: "all 0.45s ease",
+                        marginTop: "0.75rem",
                         zIndex: 1000,
                       }}
                     >
+                      {/* Dropdown Box */}
                       <div
-                        style={{
-                          backgroundColor: "white",
-                          borderRadius: "12px",
-                          boxShadow: "0 10px 40px rgba(0, 0, 0, 0.1)",
-                          padding: "0.5rem",
-                          minWidth: "220px",
-                          border: "1px solid #e5e7eb",
-                          transform: isDropdownOpen
-                            ? "translateY(0) scale(1)"
-                            : "translateY(-10px) scale(0.95)",
-                          transition:
-                            "transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-                        }}
-                      >
+  className="dropdown-glass"
+  style={{
+    background: "rgba(255,255,255,0.95)",
+    backdropFilter: "blur(12px)",
+    WebkitBackdropFilter: "blur(12px)",
+    borderRadius: "12px",
+    boxShadow: "0 30px 70px rgba(0,0,0,0.12)",
+    border: "1px solid rgba(0,0,0,0.06)",
+    padding: "1.5rem",
+    width: "420px",
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    gap: "0.75rem",
+    position: "relative",
+  }}
+>
+
                         {dropdownItems.map((item, index) => (
                           <a
                             key={index}
                             href={item.href}
-                            className="dropdown-item"
                             style={{
-                              padding: "0.75rem 1rem",
-                              borderRadius: "8px",
-                              transition: "all 0.2s ease",
-                              fontSize: "1rem",
-                              fontWeight: "500",
-                              color: "#374151",
+                              padding: "0.9rem 1rem",
+                              borderRadius: "6px",
+                              fontSize: "0.95rem",
+                              fontWeight: "600",
+                              color: "#1f2937",
                               textDecoration: "none",
-                              display: "block",
-                              animation: isDropdownOpen
-                                ? `fadeInUp 0.3s ease forwards ${index * 0.05}s`
-                                : "none",
-                              opacity: isDropdownOpen ? 1 : 0,
+                              transition: "all 0.2s ease",
                             }}
                             onMouseEnter={(e) => {
-                              e.target.style.backgroundColor = "#f3f4f6";
-                              e.target.style.color = "#276c63";
-                              e.target.style.transform = "translateX(4px)";
+                              e.currentTarget.style.backgroundColor = "#f0fdfa";
+                              e.currentTarget.style.color = "#276c63";
                             }}
                             onMouseLeave={(e) => {
-                              e.target.style.backgroundColor = "transparent";
-                              e.target.style.color = "#374151";
-                              e.target.style.transform = "translateX(0)";
+                              e.currentTarget.style.backgroundColor =
+                                "transparent";
+                              e.currentTarget.style.color = "#1f2937";
                             }}
                           >
                             {item.name}
@@ -405,7 +465,7 @@ function Navbar() {
 
             <a
               href="https://primewealthcare.in/"
-              className="btn w-100 mt-3"// 🔥 glass transparency
+              className="btn w-100 mt-3" // 🔥 glass transparency
               target="_blank"
               rel="noreferrer"
               style={{
@@ -463,7 +523,6 @@ const navLinkStyle = {
   padding: "0.5rem 1rem",
   borderRadius: "6px",
 };
-
 
 const mobileLinkStyle = {
   color: "#374151",

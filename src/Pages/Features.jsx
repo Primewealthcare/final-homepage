@@ -19,9 +19,13 @@ function Features() {
         <div className="container">
           <div className="row g-5">
             <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-              <h1 className="display-6 mb-5">
+              <h1 className="display-6 mb-4">
                 Few Reasons Why People Choosing Us!
               </h1>
+              <button className="btn btn-primary mb-4">
+  Get Free Consultation
+</button>
+
               <p className="mb-4">
                 We understand that budget is a major factor in choosing
                 insurance. That's why we provide competitive and affordable

@@ -21,7 +21,7 @@ function Service() {
         <div className="container">
           <div className="text-center mx-auto" style={{ maxWidth: 500 }}>
             <h1 className="display-6 mb-5 text-light" style={{textShadow: "2px 2px 4px #000000"}}>
-              We Provide professional Insurance Services
+Professional Insurance Services You Can Trust
             </h1>
           </div>
           <div className="row g-4 justify-content-center">
@@ -44,7 +44,7 @@ function Service() {
                   </div>
                   <h4 className="mb-0">Life Insurance</h4>
                 </div>
-                <p classname="mb-4">
+                <p className="mb-4">
                   We Offer A Plethora Of Life Insurance Policies Through The
                   Channel Of LIFE CORPORATION OF INDIA (L.I.C).
                 </p>

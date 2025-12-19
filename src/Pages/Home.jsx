@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import heroimg324 from "../IMG/heroimg324.png";
 import About from "./About";
 import Features from "./Features";
@@ -20,6 +20,19 @@ import PolicyBrochure from "./PolicyBrochure";
 import ModernCarousel from "./Carausal";
 
 function Home() {
+
+   useEffect(() => {
+  const interval = setInterval(() => {
+    const cards = document.querySelectorAll(".team-card");
+    if (!cards.length) return;
+
+    const last = cards[cards.length - 1];
+    last.parentNode.insertBefore(last, cards[0]);
+  }, 2500);
+
+  return () => clearInterval(interval);
+}, []);
+
   return (
     <div
     // style={{backgroundColor: "#dcfcf4"}}
@@ -122,12 +135,12 @@ function Home() {
                 Meet Our Professional Team Members
               </h1>
             </div>
-            <div className="row g-4">
+            <div className="row g-4 team-stack">
               <div
                 className="col-lg-3 col-md-6 wow fadeInUp"
                 data-wow-delay="0.1s"
               >
-                <div className="team-item rounded">
+                <div className="team-item rounded stack-card card-1">
                   <img className="img-fluid" src={PIYUSHPANDYA} alt />
                   <div className="text-center p-4">
                     <h5>Piyush Pandya</h5>
@@ -169,7 +182,7 @@ function Home() {
                 className="col-lg-3 col-md-6 wow fadeInUp"
                 data-wow-delay="0.3s"
               >
-                <div className="team-item rounded">
+                <div className="team-item rounded stack-card card-2">
                   <img className="img-fluid" src={DARSHNAPANDYA} alt />
                   <div className="text-center p-4">
                     <h5>Darshna Pandya</h5>
@@ -211,11 +224,11 @@ function Home() {
                 className="col-lg-3 col-md-6 wow fadeInUp"
                 data-wow-delay="0.5s"
               >
-                <div className="team-item rounded">
+                <div className="team-item rounded stack-card card-3">
                   <img className="img-fluid" src={PARULPANDYA} alt />
                   <div className="text-center p-4">
                     <h5>Parul Pandya</h5>
-                    <span>Director</span>
+                    <span>Director test</span>
                   </div>
                   <div
                     style={{ background: "#dcfcf4" }}
@@ -253,11 +266,11 @@ function Home() {
                 className="col-lg-3 col-md-6 wow fadeInUp"
                 data-wow-delay="0.7s"
               >
-                <div className="team-item rounded">
+                <div className="team-item rounded stack-card card-4">
                   <img className="img-fluid" src={MITSUMAM} alt />
                   <div className="text-center p-4">
                     <h5>Mitsu Pandya</h5>
-                    <span> Principal Officer </span>
+                    <span> Principal Officer</span>
                   </div>
                   <div
                     style={{ background: "#dcfcf4" }}
@@ -342,10 +355,10 @@ function Home() {
         </div>
       </div> */}
 
-            <div className="carousel-item active">
+            {/* <div className="carousel-item active">
               <div className="row">
                 <div
-                  className="col-lg-4 col-md-6 mb-4 wow fadeInUp"
+                  className="col-lg-6 col-md-6 mb-4 wow fadeInUp"
                   data-wow-delay="0.1s"
                 >
                   <div className="ratio ratio-16x9">
@@ -384,7 +397,41 @@ function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
+
+<div className="carousel-item active">
+  <div className="event-grid">
+    <div className="event-video v1">
+      <div className="ratio ratio-16x9">
+        <iframe
+          src="https://www.youtube.com/embed/vXcEL9r3Roo?autoplay=1&mute=1&loop=1&playlist=vXcEL9r3Roo"
+          allow="autoplay"
+          allowFullScreen
+        />
+      </div>
+    </div>
+
+    <div className="event-video v2">
+      <div className="ratio ratio-16x9">
+        <iframe
+          src="https://www.youtube.com/embed/vV05WzRLhsg?autoplay=1&mute=1&loop=1&playlist=vV05WzRLhsg"
+          allow="autoplay"
+          allowFullScreen
+        />
+      </div>
+    </div>
+
+    <div className="event-video v3">
+      <div className="ratio ratio-16x9">
+        <iframe
+          src="https://www.youtube.com/embed/YjVIcZJZKxA?autoplay=1&mute=1&loop=1&playlist=YjVIcZJZKxA"
+          allow="autoplay"
+          allowFullScreen
+        />
+      </div>
+    </div>
+  </div>
+</div>
 
             <div className="carousel-item">
               <div className="row">
@@ -427,37 +474,7 @@ function Home() {
               </div>
             </div>
           </div>
-          {/* Carousel controls */}
-          <div
-            className="testimonial-carousel owl-loaded owl-drag "
-            style={{ textAlign: "center" }}
-          >
-            <div className="owl-nav">
-              <div
-                className="owl-prev"
-                data-bs-target="#eventCarousel"
-                data-bs-slide="prev"
-              >
-                <i className="bi bi-chevron-left" />
-              </div>
-
-              {/* <a href="https://www.youtube.com/@primewealthcaresolutionpvtltd" target="_blank" style={{color: 'white', padding: 5}}>View More</a> */}
-              <a
-                href="/Events"
-                className="btn btn-primary px-3 d-none d-lg-block "
-              >
-                View More
-              </a>
-
-              <div
-                className="owl-next"
-                data-bs-target="#eventCarousel"
-                data-bs-slide="next"
-              >
-                <i className="bi bi-chevron-right" />
-              </div>
-            </div>
-          </div>
+        
         </div>
       </div>
       {/* Event end  */}

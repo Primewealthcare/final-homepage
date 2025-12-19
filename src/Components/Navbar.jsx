@@ -198,12 +198,11 @@ function Navbar() {
         }}
       > */}
       <nav
-  className={`navbar navbar-expand-lg 
+        className={`navbar navbar-expand-lg 
     ${scrolled ? "scrolled" : ""} 
     ${showNavbar ? "nav-show" : "nav-hide"}
   `}
->
-
+      >
         <div className="container-fluid flex px-0">
           <div className="d-flex align-items-center navbar-inner">
             {/* Logo */}
@@ -279,23 +278,22 @@ function Navbar() {
                     >
                       {/* Dropdown Box */}
                       <div
-  className="dropdown-glass"
-  style={{
-    background: "rgba(255,255,255,0.95)",
-    backdropFilter: "blur(12px)",
-    WebkitBackdropFilter: "blur(12px)",
-    borderRadius: "12px",
-    boxShadow: "0 30px 70px rgba(0,0,0,0.12)",
-    border: "1px solid rgba(0,0,0,0.06)",
-    padding: "1.5rem",
-    width: "420px",
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-    gap: "0.75rem",
-    position: "relative",
-  }}
->
-
+                        className="dropdown-glass"
+                        style={{
+                          background: "rgba(255,255,255,0.95)",
+                          backdropFilter: "blur(12px)",
+                          WebkitBackdropFilter: "blur(12px)",
+                          borderRadius: "12px",
+                          boxShadow: "0 30px 70px rgba(0,0,0,0.12)",
+                          border: "1px solid rgba(0,0,0,0.06)",
+                          padding: "1.5rem",
+                          width: "420px",
+                          display: "grid",
+                          gridTemplateColumns: "1fr 1fr",
+                          gap: "0.75rem",
+                          position: "relative",
+                        }}
+                      >
                         {dropdownItems.map((item, index) => (
                           <a
                             key={index}

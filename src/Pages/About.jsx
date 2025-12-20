@@ -12,6 +12,7 @@ import { useRef, useState } from "react";
 
 
 function About() {
+  
   useEffect(() => {
   const elements = document.querySelectorAll(".reveal");
 
@@ -40,15 +41,17 @@ useEffect(() => {
     ([entry]) => {
       if (entry.isIntersecting) {
         setStartCount(true);
-        observer.disconnect(); // run once
+        observer.disconnect(); // run only once
       }
     },
     { threshold: 0.3 }
   );
 
   if (counterRef.current) observer.observe(counterRef.current);
+
   return () => observer.disconnect();
 }, []);
+
 
   return (
     <div>
@@ -56,7 +59,7 @@ useEffect(() => {
       <a href="#" class="btn btn-lg btn-dark btn-lg-square back-to-top">
         <i class="bi bi-arrow-up"></i>
       </a>
-      <div className="container-xxl py-5 about-section">
+      <div className="container-xxl py-0 about-section">
         <div className="container">
           <div className="row g-5">
             <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -171,34 +174,40 @@ useEffect(() => {
               className="col-lg-6 facts-counter wow fadeInUp"
               data-wow-delay="0.5s"
             >
-                <div  ref={counterRef} className="h-100 px-4 pe-lg-0 align-item-center">
-                <div className="row g-5 text-center">
-                  <div className="col-sm-6">
-                    <h1 className="display-5" data-toggle="counter-up">
-                      <CountUp start={0} end={10000} duration={5} />
-                    </h1>
-                    <p className="fs-5 text-dark">Happy Clients</p>
-                  </div>
-                  <div className="col-sm-6">
-                    <h1 className="display-5" data-toggle="counter-up">
-                      <CountUp start={0} end={65000000} duration={5} />
-                    </h1>
-                    <p className="fs-5 text-dark">Approved Claim Amount</p>
-                  </div>
-                  <div className="col-sm-6">
-                    <h1 className="display-5" data-toggle="counter-up">
-                      <CountUp start={0} end={30} duration={6} />
-                    </h1>
-                    <p className="fs-5 text-dark">Awards Achieved</p>
-                  </div>
-                  <div className="col-sm-6">
-                    <h1 className="display-5" data-toggle="counter-up">
-                      <CountUp start={0} end={130} duration={6} />
-                    </h1>
-                    <p className="fs-5 text-dark">Team Members</p>
-                  </div>
-                </div>
-              </div>
+               <div ref={counterRef} className="h-100 px-4 pe-lg-0 align-item-center">
+  <div className="row g-5 text-center">
+
+    <div className="col-sm-6">
+      <h1 className="display-5">
+        {startCount && <CountUp end={10000} duration={5} />}
+      </h1>
+      <p className="fs-5 text-dark">Happy Clients</p>
+    </div>
+
+    <div className="col-sm-6">
+      <h1 className="display-5">
+        {startCount && <CountUp end={65000000} duration={5} separator="," />}
+      </h1>
+      <p className="fs-5 text-dark">Approved Claim Amount</p>
+    </div>
+
+    <div className="col-sm-6">
+      <h1 className="display-5">
+        {startCount && <CountUp end={30} duration={6} />}
+      </h1>
+      <p className="fs-5 text-dark">Awards Achieved</p>
+    </div>
+
+    <div className="col-sm-6">
+      <h1 className="display-5">
+        {startCount && <CountUp end={130} duration={6} />}
+      </h1>
+      <p className="fs-5 text-dark">Team Members</p>
+    </div>
+
+  </div>
+</div>
+
             </div>
           </div>
         </div>

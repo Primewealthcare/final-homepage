@@ -596,7 +596,7 @@ Person will get the accrued continuity benefits in waiting periods as per IRDAI 
               className="img-fluid"
               src={first}
               height="100px"
-              width="600px"
+              width="900px"
               alt
             />
           </div>

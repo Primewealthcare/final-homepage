@@ -321,6 +321,7 @@ function Home() {
 
       {/* Team Members end  */}
       {/* Event start  */}
+<div className="events-section">
 
       <div
         id="eventCarousel"
@@ -477,6 +478,7 @@ function Home() {
         
         </div>
       </div>
+</div>
       {/* Event end  */}
 
       <Company />
@@ -484,10 +486,11 @@ function Home() {
       {/* <Leaders/> */}
 
       {/* Leaders module start  */}
+      <div className="testimonial-section py-5">
       <div>
-        <div className="container-xxl py-5">
+        <div className="container-xxl">
           <div className="container">
-            <div className="text-center mx-auto" style={{ maxWidth: 500 }}>
+            <div className="text-center mx-auto" style={{ maxWidth: 700 }}>
               <h1 className="display-6 mb-5">
                 What They Say About Our Insurance
               </h1>
@@ -500,7 +503,8 @@ function Home() {
           <img className="img-fluid animated pulse infinite" src={satish} alt /> */}
                 </div>
               </div>
-              <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+              <div className="col-lg-10 mx-auto wow fadeIn" data-wow-delay="0.5s">
+
                 <div className="owl-carousel testimonial-carousel">
                   <div className="testimonial-item text-center">
                     <img
@@ -590,6 +594,7 @@ function Home() {
             </div>
           </div>
         </div>
+      </div>
       </div>
       <PolicyBrochure/>
 

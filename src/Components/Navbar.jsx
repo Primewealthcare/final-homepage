@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 import logo from "../IMG/logo.png";
 import facebook from "../IMG/facebook.png";
@@ -22,6 +22,8 @@ function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const mobileMenuRef = useRef(null);
+const mobileToggleRef = useRef(null);
 
   const socialStyle = {
     width: "32px",
@@ -36,28 +38,51 @@ function Navbar() {
   };
 
   useEffect(() => {
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY;
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
 
-    // Glass effect trigger
-    setScrolled(currentScrollY > 50);
+      // Glass effect trigger
+      setScrolled(currentScrollY > 50);
 
-    // Ignore tiny scrolls (prevents flicker)
-    if (Math.abs(currentScrollY - lastScrollY) < 10) return;
+      // Ignore tiny scrolls (prevents flicker)
+      if (Math.abs(currentScrollY - lastScrollY) < 10) return;
 
-    // Hide on scroll down, show on scroll up
-    if (currentScrollY > lastScrollY && currentScrollY > 120) {
-      setShowNavbar(false);
-    } else {
-      setShowNavbar(true);
+      // Hide on scroll down, show on scroll up
+      if (currentScrollY > lastScrollY && currentScrollY > 120) {
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
+  useEffect(() => {
+  const handleClickOutside = (e) => {
+    if (
+      mobileMenuRef.current &&
+      !mobileMenuRef.current.contains(e.target) &&
+      mobileToggleRef.current &&
+      !mobileToggleRef.current.contains(e.target)
+    ) {
+      setIsMobileMenuOpen(false);
+      setIsMobileDropdownOpen(false);
     }
-
-    setLastScrollY(currentScrollY);
   };
 
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, [lastScrollY]);
+  if (isMobileMenuOpen) {
+    document.addEventListener("mousedown", handleClickOutside);
+  }
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, [isMobileMenuOpen]);
+
 
 
   const dropdownItems = [
@@ -363,11 +388,28 @@ function Navbar() {
 
             {/* Mobile Toggle */}
             <button
-              type="button"
-              className="navbar-toggler border-0 d-lg-none ms-auto"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              <span className="navbar-toggler-icon" />
+  ref={mobileToggleRef}
+  type="button"
+  className="border-0 d-lg-none ms-auto bg-transparent"
+  onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+  aria-label="Toggle navigation"
+>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                fill="none"
+                stroke="#276c63"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                viewBox="0 0 24 24"
+              >
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
             </button>
           </div>
         </div>
@@ -376,17 +418,26 @@ function Navbar() {
         {isMobileMenuOpen && (
           <div
             className="d-lg-none"
+            ref={mobileMenuRef}
             style={{
-              position: "absolute",
-              top: "100%",
-              left: 0,
-              right: 0,
-              backgroundColor: "white",
-              boxShadow: "0 10px 40px rgba(0, 0, 0, 0.1)",
-              padding: "1.5rem",
-              zIndex: 999,
-              animation: "slideDown 0.3s ease",
-            }}
+  position: "absolute",
+  top: "100%",
+  left: "1rem",
+  right: "1rem",
+
+  background: "linear-gradient(180deg, #f0fdfa 0%, #ffffff 100%)",
+  backdropFilter: "blur(12px)",
+  WebkitBackdropFilter: "blur(12px)",
+
+  boxShadow: "0 20px 50px rgba(39,108,99,0.25)",
+  border: "1px solid rgba(39,108,99,0.15)",
+  borderRadius: "18px",
+
+  padding: "1.75rem",
+  zIndex: 999,
+  animation: "slideDown 0.3s ease",
+}}
+
           >
             <a href="/" className="d-block py-2 px-3" style={mobileLinkStyle}>
               Home
@@ -523,12 +574,14 @@ const navLinkStyle = {
 };
 
 const mobileLinkStyle = {
-  color: "#374151",
+  color: "#1f2937",
   fontWeight: "600",
   fontSize: "1.05rem",
+  padding: "0.75rem 0.75rem",
+  borderRadius: "10px",
   textDecoration: "none",
-  borderRadius: "6px",
-  transition: "all 0.2s ease",
+  transition: "background 0.2s ease",
 };
+
 
 export default Navbar;

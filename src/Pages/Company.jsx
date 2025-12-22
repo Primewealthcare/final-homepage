@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import FG from "../IMG/Company/FG.svg";
+import GCLOGO from "../IMG/Company/gc_logo.png";
 import first from "../IMG/Company/first.gif";
 import TATAAIG from "../IMG/Company/TATAAIG.svg";
 import HDFCERGO from "../IMG/Company/HDFCERGO.svg";
@@ -823,7 +823,7 @@ Person will get the accrued continuity benefits in waiting periods as per IRDAI 
 
         <div className="marquee-container">
           <div className="marquee-row left">
-            {[FG, HDFCERGO, CARE, FG, HDFCERGO, CARE].map((logo, i) => (
+            {[GCLOGO, HDFCERGO, CARE, GCLOGO, HDFCERGO, CARE].map((logo, i) => (
               <div className="logo-card" key={i}>
                 <img src={logo} alt="partner" />
               </div>

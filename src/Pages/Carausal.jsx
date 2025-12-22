@@ -56,7 +56,7 @@ const ModernCarousel = ({ heroimg324 }) => {
   };
 
   return (
-    <div style={{ position: 'relative', width: '100%', height: '100vh', minHeight: '700px', overflow: 'hidden', backgroundColor: '#1a1a1a' }}>
+    <div className="modern-carousel" style={{ position: 'relative', width: '100%', height: '100vh', minHeight: '700px', overflow: 'hidden', backgroundColor: '#1a1a1a' }}>
       {/* Slides Container */}
       <div style={{ position: 'relative', width: '100%', height: '100%' }}>
         {slides.map((slide, index) => (
@@ -97,7 +97,7 @@ const ModernCarousel = ({ heroimg324 }) => {
 
             {/* Content */}
             <div style={{ position: 'relative', height: '100%', display: 'flex', alignItems: 'center', zIndex: 2 }}>
-              <div className="container">
+              <div className="container carousel-content">
                 <div className="row">
                   <div className="col-12 col-lg-6">
                     <h1

@@ -21,9 +21,11 @@ function Navbar() {
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollY = useRef(0);
+
+
   const mobileMenuRef = useRef(null);
-const mobileToggleRef = useRef(null);
+  const mobileToggleRef = useRef(null);
 
   const socialStyle = {
     width: "32px",
@@ -38,52 +40,52 @@ const mobileToggleRef = useRef(null);
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
 
-      // Glass effect trigger
-      setScrolled(currentScrollY > 50);
+    // Glass effect
+    setScrolled(currentScrollY > 50);
 
-      // Ignore tiny scrolls (prevents flicker)
-      if (Math.abs(currentScrollY - lastScrollY) < 10) return;
+    // Ignore micro scrolls
+    if (Math.abs(currentScrollY - lastScrollY.current) < 10) return;
 
-      // Hide on scroll down, show on scroll up
-      if (currentScrollY > lastScrollY && currentScrollY > 120) {
-        setShowNavbar(false);
-      } else {
-        setShowNavbar(true);
-      }
+    // Hide on scroll down, show on scroll up
+    if (currentScrollY > lastScrollY.current && currentScrollY > 120) {
+      setShowNavbar(false);
+    } else {
+      setShowNavbar(true);
+    }
 
-      setLastScrollY(currentScrollY);
-    };
+    lastScrollY.current = currentScrollY;
+  };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  window.addEventListener("scroll", handleScroll, { passive: true });
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
 
   useEffect(() => {
-  const handleClickOutside = (e) => {
-    if (
-      mobileMenuRef.current &&
-      !mobileMenuRef.current.contains(e.target) &&
-      mobileToggleRef.current &&
-      !mobileToggleRef.current.contains(e.target)
-    ) {
-      setIsMobileMenuOpen(false);
-      setIsMobileDropdownOpen(false);
+    const handleClickOutside = (e) => {
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(e.target) &&
+        mobileToggleRef.current &&
+        !mobileToggleRef.current.contains(e.target)
+      ) {
+        setIsMobileMenuOpen(false);
+        setIsMobileDropdownOpen(false);
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
     }
-  };
 
-  if (isMobileMenuOpen) {
-    document.addEventListener("mousedown", handleClickOutside);
-  }
-
-  return () => {
-    document.removeEventListener("mousedown", handleClickOutside);
-  };
-}, [isMobileMenuOpen]);
-
-
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
 
   const dropdownItems = [
     { name: "Features", href: "/Features" },
@@ -390,55 +392,44 @@ const mobileToggleRef = useRef(null);
             <button
   ref={mobileToggleRef}
   type="button"
-  className="border-0 d-lg-none ms-auto bg-transparent"
+  className={`mobile-toggle d-lg-none ms-auto ${
+    isMobileMenuOpen ? "open" : ""
+  }`}
   onClick={() => setIsMobileMenuOpen((prev) => !prev)}
   aria-label="Toggle navigation"
 >
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="28"
-                height="28"
-                fill="none"
-                stroke="#276c63"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                viewBox="0 0 24 24"
-              >
-                <line x1="3" y1="6" x2="21" y2="6" />
-                <line x1="3" y1="12" x2="21" y2="12" />
-                <line x1="3" y1="18" x2="21" y2="18" />
-              </svg>
-            </button>
+  <span />
+  <span />
+  <span />
+</button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div
-            className="d-lg-none"
-            ref={mobileMenuRef}
-            style={{
-  position: "absolute",
-  top: "100%",
-  left: "1rem",
-  right: "1rem",
+           <div
+    className="d-lg-none"
+    ref={mobileMenuRef}
+    style={{
+      position: "absolute",
+      top: "100%",
+      left: "50%",
+      transform: "translateX(-50%)",
 
-  background: "linear-gradient(180deg, #f0fdfa 0%, #ffffff 100%)",
-  backdropFilter: "blur(12px)",
-  WebkitBackdropFilter: "blur(12px)",
+      width: "100%",
+      maxWidth: "520px",   // wider menu
+      padding: "20px 22px",
 
-  boxShadow: "0 20px 50px rgba(39,108,99,0.25)",
-  border: "1px solid rgba(39,108,99,0.15)",
-  borderRadius: "18px",
+      backgroundColor: "#ffffff",
+      border: "1px solid rgba(39,108,99,0.15)",
+      borderRadius: "1px", // low radius (minimal)
+      boxShadow: "0 12px 30px rgba(0,0,0,0.12)",
 
-  padding: "1.75rem",
-  zIndex: 999,
-  animation: "slideDown 0.3s ease",
-}}
+      marginTop: "6px",
+      zIndex: 999,
+    }}
+  >
 
-          >
             <a href="/" className="d-block py-2 px-3" style={mobileLinkStyle}>
               Home
             </a>
@@ -577,10 +568,9 @@ const mobileLinkStyle = {
   color: "#1f2937",
   fontWeight: "600",
   fontSize: "1.05rem",
-  padding: "0.75rem 0.75rem",
-  borderRadius: "10px",
+  padding: "0.85rem 1rem",
+  borderRadius: "6px",
   textDecoration: "none",
-  transition: "background 0.2s ease",
 };
 
 

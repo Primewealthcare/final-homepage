@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { FiChevronDown } from "react-icons/fi";
+import { FiChevronDown, FiDownload, FiFileText, FiCheckCircle } from "react-icons/fi";
 
 const PolicyBrochure = () => {
   const countries = [
-    // fg Start
+    // Future Generali Start
     {
-      name: "FUTURE GENRALI INDIA INSURANCE CO. LTD.",
+      name: "FUTURE GENERALI INDIA INSURANCE CO. LTD.",
       states: [
         {
           name: "HEALTH",
@@ -14,104 +14,40 @@ const PolicyBrochure = () => {
               name: "FG HEALTH TOTAL",
               details: {
                 youtubeLink: "https://www.youtube.com/embed/example1",
-                description: ` This Policy provides You options of 3 (three) plans namely Vital Plan, Superior Plan and Premiere
-Plan with each Plan having further Sum Insured options as specified in the Schedule of Benefits. The Schedule will
-specify the Sum Insured and the Plan which is in force for each of the Insured Persons. For a complete description
-of the benefits available under the applicable Plan as well as any specific limits on the amount payable under any
-particular benefit under the applicable Sum Insured and Plan, please refer to the “Schedule of Benefits” attached
-to this Policy.`,
-                benefits: `The Policy covers the Reasonable and Customary Charges incurred towards the medical treatment taken
-by the Insured Person during the Policy Period following an Illness or Injury that occurs during the Policy Period,
-subject always to the availability of the Sum Insured and any specific limits specified in the Schedule of Benefits and
-the terms, conditions and exclusions specified in this Policy document.`,
+                description: `This Policy provides You options of 3 (three) plans namely Vital Plan, Superior Plan and Premiere Plan with each Plan having further Sum Insured options as specified in the Schedule of Benefits. The Schedule will specify the Sum Insured and the Plan which is in force for each of the Insured Persons. For a complete description of the benefits available under the applicable Plan as well as any specific limits on the amount payable under any particular benefit under the applicable Sum Insured and Plan, please refer to the "Schedule of Benefits" attached to this Policy.`,
+                benefits: `The Policy covers the Reasonable and Customary Charges incurred towards the medical treatment taken by the Insured Person during the Policy Period following an Illness or Injury that occurs during the Policy Period, subject always to the availability of the Sum Insured and any specific limits specified in the Schedule of Benefits and the terms, conditions and exclusions specified in this Policy document.`,
                 subProducts: [
                   "Cashless Treatment",
                   "No Claim Bonus",
                   "Tax Benefits",
                 ],
                 heading: "FG HEALTH TOTAL",
-                policyWordingUrl: "/pdfs/Future/healthtotalwordings.pdf", // Replace with the actual URL
-                brochureUrl: "/pdfs/Future/healthtotalbrochure.pdf", // Replace with the actual URL
+                policyWordingUrl: "/pdfs/Future/healthtotalwordings.pdf",
+                brochureUrl: "/pdfs/Future/healthtotalbrochure.pdf",
               },
             },
             {
               name: "FG HEALTH ABSOLUTE",
               details: {
                 youtubeLink: "https://www.youtube.com/embed/example2",
-                description: `This Policy provides You options of 3 (three) plans namely Classic, Platinum, Signature. Each plan has various
-Sum Insured options as specified in the Schedule of Benefits. The schedule will specify the Sum Insured and the plan which is
-in force for the Insured Persons. For a complete description of the benefits available, please refer to the “Schedule of Benefits”
-attached to this Policy`,
-                benefits: ` This Policy covers the Reasonable and Customary Charges incurred towards the medical treatment taken by the
-Insured Person following an Illness or Injury that occurs during the Policy Period, subject to the availability of the Sum Insured,
-any sub-limits specified in the Schedule of Benefits and the terms, conditions and exclusions specified in this Policy document`,
+                description: `This Policy provides You options of 3 (three) plans namely Classic, Platinum, Signature. Each plan has various Sum Insured options as specified in the Schedule of Benefits. The schedule will specify the Sum Insured and the plan which is in force for the Insured Persons. For a complete description of the benefits available, please refer to the "Schedule of Benefits" attached to this Policy`,
+                benefits: `This Policy covers the Reasonable and Customary Charges incurred towards the medical treatment taken by the Insured Person following an Illness or Injury that occurs during the Policy Period, subject to the availability of the Sum Insured, any sub-limits specified in the Schedule of Benefits and the terms, conditions and exclusions specified in this Policy document`,
                 subProducts: ["Affordable Premium", "Wide Network"],
                 heading: "FG HEALTH ABSOLUTE",
-                policyWordingUrl:
-                  "/pdfs/Future/fghealthabsolutepolicywordings.pdf", // Replace with the actual URL
-                brochureUrl: "/pdfs/Future/fghealthabsolutebrochure.pdf", // Replace with the actual URL
+                policyWordingUrl: "/pdfs/Future/fghealthabsolutepolicywordings.pdf",
+                brochureUrl: "/pdfs/Future/fghealthabsolutebrochure.pdf",
               },
             },
             {
               name: "FG HEALTH SURAKSHA",
               details: {
                 youtubeLink: "https://www.youtube.com/embed/example2",
-                description: `This Policy is issued to You based on Your Proposal to Us and Your payment of the Premium. You are eligible to enter this Policy if Your age is
-between 90 days to 70 years with lifelong renewability. This Policy records the agreement between Us and sets out the terms of insurance and the
-obligations of each party. 
-`,
-                benefits: `Available for persons above 60 years, We shall provide payment for the nursing charges by a qualified nurse if necessary and
-recommended by the treating physician immediately after discharge from the Hospital, up to the amount specified in the Schedule of Benefits,
-up to a maximum of 10 days per Hospitalization subject to maximum of 30 days during the Policy Year. This cover is over and above the
-Hospitalization sum insured.`,
+                description: `This Policy is issued to You based on Your Proposal to Us and Your payment of the Premium. You are eligible to enter this Policy if Your age is between 90 days to 70 years with lifelong renewability. This Policy records the agreement between Us and sets out the terms of insurance and the obligations of each party.`,
+                benefits: `Available for persons above 60 years, We shall provide payment for the nursing charges by a qualified nurse if necessary and recommended by the treating physician immediately after discharge from the Hospital, up to the amount specified in the Schedule of Benefits, up to a maximum of 10 days per Hospitalization subject to maximum of 30 days during the Policy Year. This cover is over and above the Hospitalization sum insured.`,
                 subProducts: ["Affordable Premium", "Wide Network"],
                 heading: "FG HEALTH SURAKSHA",
-                policyWordingUrl:
-                  "/pdfs/Future/healthsurakshapolicywordings.pdf", // Replace with the actual URL
-                brochureUrl: "/pdfs/Future/healthsurakshabrochure.pdf", // Replace with the actual URL
-              },
-            },
-            {
-              name: "FG ADVANTAGE TOP UP",
-              details: {
-                youtubeLink: "https://www.youtube.com/embed/example2",
-                description: `
-This Policy has been issued to You based on the questions in Your Proposal to Us and the Disclosure to information norm which form a part 
-of the Policy and on the receipt of premium due. 
-This Policy covers eligible Insured Persons of all ages and may continue to be renewed throughout the life of the Insured Persons. 
-This Policy records the agreement between You and Us and sets out the terms, conditions and exclusions applicable under this Policy as 
-well as the obligations of You, Us, the Insured Persons and claimants.  `,
-                benefits: `The insured person will have the option to port the policy to other insurers by applying to such insurer to port the entire policy along 
-with all the members of the family, if any, at least 45 days before, but not earlier than 60 days from the policy renewal date as per 
-IRDAI guidelines related to portability. lf such person is presently covered and has been continuously covered without any lapses 
-under any health insurance policy with an lndian General/Health insurer, the proposed insured person will get the accrued continuity 
-benefits in waiting periods as per IRDAI guidelines on portability. `,
-                subProducts: ["Affordable Premium", "Wide Network"],
-                heading: "FG ADVANTAGE TOP UP",
-                policyWordingUrl:
-                  "/pdfs/Future/futureadvantagetopuppolicywordings.pdf", // Replace with the actual URL
-                brochureUrl: "/pdfs/Future/futureadvantagetopupbrochure.pdf", // Replace with the actual URL
-              },
-            },
-            {
-              name: "FG VARISHTHA BIMA",
-              details: {
-                youtubeLink: "https://www.youtube.com/embed/example2",
-                description: `This Policy is issued to You based on Your Proposal and declarations together/ followed by, with any other documents to Us and Your payment
-of the premium on behalf of you and the persons to be insured. This Policy records the contract between Us and You and/or any Insured Person and
-sets out the terms of insurance and the obligations of each party. Now this contract witnesses to the definitions terms, conditions and exclusions
-contained herein, or endorsed or otherwise expressed hereon and sets out as stated in Schedule of this policy/contract to the said Insured Person/s
-claiming payment or upon the happening of an event upon which one or more benefits become payable under the sum insured as stated in the Schedule.`,
-                benefits: `The insured person will have the option to port the policy to other insurers by applying to such insurer to port the entire policy along with all the
-members of the family, if any, at least 45 days before, but not earlier than 60 days from the policy renewal date as per IRDAI guidelines related
-to portability. lf such person is presently covered and has been continuously covered without any lapses under any health insurance policy with
-an lndian General/ Health insurer, the proposed insured person will get the accrued continuity benefits in waiting periods as per IRDAI
-guidelines on portability.`,
-                subProducts: ["Affordable Premium", "Wide Network"],
-                heading: "FG VARISHTHA BIMA",
-                policyWordingUrl:
-                  "/pdfs/Future/futurevarishtabimapolicywordings.pdf", // Replace with the actual URL
-                brochureUrl: "/pdfs/Future/futurevaristhabimabrochure.pdf", // Replace with the actual URL
+                policyWordingUrl: "/pdfs/Future/healthsurakshapolicywordings.pdf",
+                brochureUrl: "/pdfs/Future/healthsurakshabrochure.pdf",
               },
             },
           ],
@@ -120,24 +56,19 @@ guidelines on portability.`,
           name: "INDIVIDUAL PERSONAL ACCIDENT [IPA]",
           cities: [
             {
-              name: "FG ACCIDENT SURAKSHA ",
+              name: "FG ACCIDENT SURAKSHA",
               details: {
                 youtubeLink: "https://www.youtube.com/embed/example1",
-                description: `This Policy is issued to You based on the Disclosure to information norm, Your Proposal to Us and Your payment of the Premium. This 
-Policy records the agreement between Us and You and sets out the terms of insurance and the obligations of each party. `,
-                benefits: `he insured person will have the option to migrate the policy to other health insurance products/plans offered by the company by applying for 
-migration of the policy at least 30 days before the policy renewal date as per IRDAI guidelines on Migration. lf such person is presently covered 
-and has been continuously covered without any lapses under any health insurance product/plan offered by the company, the insured person will 
-get all the accrued continuity benefits in waiting periods as per the IRDAI guidelines on migration.  `,
+                description: `This Policy is issued to You based on the Disclosure to information norm, Your Proposal to Us and Your payment of the Premium. This Policy records the agreement between Us and You and sets out the terms of insurance and the obligations of each party.`,
+                benefits: `The insured person will have the option to migrate the policy to other health insurance products/plans offered by the company by applying for migration of the policy at least 30 days before the policy renewal date as per IRDAI guidelines on Migration.`,
                 subProducts: [
                   "Cashless Treatment",
                   "No Claim Bonus",
                   "Tax Benefits",
                 ],
                 heading: "FG ACCIDENT SURAKSHA",
-                policyWordingUrl:
-                  "/pdfs/Future/accidentsurakshapolicywordings.pdf", // Replace with the actual URL
-                brochureUrl: "/pdfs/Future/accidentsurakshabrochure.pdf", // Replace with the actual URL
+                policyWordingUrl: "/pdfs/Future/accidentsurakshapolicywordings.pdf",
+                brochureUrl: "/pdfs/Future/accidentsurakshabrochure.pdf",
               },
             },
           ],
@@ -146,31 +77,26 @@ get all the accrued continuity benefits in waiting periods as per the IRDAI guid
           name: "TRAVEL & OVERSEAS",
           cities: [
             {
-              name: "TRAVEL SURKSHA",
+              name: "TRAVEL SURAKSHA",
               details: {
                 youtubeLink: "https://www.youtube.com/embed/example1",
-                description: `This Policy is issued to you based on your Proposal to us and payment of the Premium. You are eligible to be covered under this policy if your age is
-between 6 months to 80 years. This Policy records the agreement between us and you, and sets out the terms of insurance and obligations of each
-party.`,
-                benefits: ` Cashless Claim Settlement, Claims turnaround time of fourteen working days, Worldwide Emergency, Medical and Travel Assistance Services, Ease and convenience of purchase, Child escort benefit, Cover extension in india, up to 90 days for medical expenses on evacuation, Reimbursement of claims as per policy terms and conditions, Worldwide Service Provider, Flaxibility of choosing a Travel Insurance Plan as per your need, Instant Policy issuance, Specially designed plan for senior citizens (i.e. 71 - 80 years of age)  `,
+                description: `This Policy is issued to you based on your Proposal to us and payment of the Premium. You are eligible to be covered under this policy if your age is between 6 months to 80 years. This Policy records the agreement between us and you, and sets out the terms of insurance and obligations of each party.`,
+                benefits: `Cashless Claim Settlement, Claims turnaround time of fourteen working days, Worldwide Emergency, Medical and Travel Assistance Services, Ease and convenience of purchase, Child escort benefit, Cover extension in india, up to 90 days for medical expenses on evacuation, Reimbursement of claims as per policy terms and conditions, Worldwide Service Provider, Flexibility of choosing a Travel Insurance Plan as per your need, Instant Policy issuance, Specially designed plan for senior citizens (i.e. 71 - 80 years of age)`,
                 subProducts: [
                   "Cashless Treatment",
                   "No Claim Bonus",
                   "Tax Benefits",
                 ],
-                heading: "FG HEALTH TOTAL",
-                policyWordingUrl:
-                  "/pdfs/Future/futuretravelsurakshapolicywordings.pdf", // Replace with the actual URL
-                brochureUrl:
-                  "/pdfs/Future/futuretravelsurakshaworldwideebrochure.pdf", // Replace with the actual URL
+                heading: "TRAVEL SURAKSHA",
+                policyWordingUrl: "/pdfs/Future/futuretravelsurakshapolicywordings.pdf",
+                brochureUrl: "/pdfs/Future/futuretravelsurakshaworldwideebrochure.pdf",
               },
             },
           ],
         },
       ],
     },
-    // Fg end
-    // care start
+    // Care Health Start
     {
       name: "CARE HEALTH INSURANCE CO. LTD.",
       states: [
@@ -181,7 +107,7 @@ party.`,
               name: "CARE SUPREME",
               details: {
                 youtubeLink: "https://www.youtube.com/embed/example1",
-                description: `The proposal and declaration given by the proposer and other documents if any shall form the basis of this Contract and is deemed to be incorporated herein. The two parties to this contract are the Policy Holder/Insured/Insured Persons (also referred as You) and Care Health Insurance Limited (also referred as Company/ We/Us), and all the Provisions of Indian Contract Act, 1872, shall hold good in this regard. The references to the singular include references to the plural; references to the male include the references to the female; and references to any statutory enactment include subsequent changes to the same and vice versa. The sentence construction and wordings in the Policy documents should be taken in its true sense and should not be taken in a way so as to take advantage of the Company by filing a claim which deviates from the purpose of Insurance.`,
+                description: `The proposal and declaration given by the proposer and other documents if any shall form the basis of this Contract and is deemed to be incorporated herein. The two parties to this contract are the Policy Holder/Insured/Insured Persons (also referred as You) and Care Health Insurance Limited (also referred as Company/ We/Us), and all the Provisions of Indian Contract Act, 1872, shall hold good in this regard.`,
                 benefits: `The Insured Person will have the option to migrate the policy to other health insurance products/plans offered by the Company by applying for migration of the policy at least 30 days before the policy renewal date as per IRDAI guidelines on Migration. If such person is presently covered and has been continuously covered without any lapses under any health insurance product/plan offered by the Company, the Insured Person will get the accrued continuity benefits as per IRDAI guidelines on migration`,
                 subProducts: [
                   "Cashless Treatment",
@@ -189,135 +115,24 @@ party.`,
                   "Tax Benefits",
                 ],
                 heading: "CARE SUPREME",
-                policyWordingUrl: "/pdfs/Care/CareSupremePolicywording.pdf", // Replace with the actual URL
-                brochureUrl: "/pdfs/Care/CareSupremeBrochure.pdf", // Replace with the actual URL
+                policyWordingUrl: "/pdfs/Care/CareSupremePolicywording.pdf",
+                brochureUrl: "/pdfs/Care/CareSupremeBrochure.pdf",
               },
             },
             {
               name: "CARE ADVANTAGE",
               details: {
                 youtubeLink: "https://www.youtube.com/embed/example1",
-                description: `The proposal and declaration given by the proposer and other documents if any shall form the basis of this Contract and is deemed to be incorporated herein. The two parties to this contract are the Policy Holder/Insured/Insured Persons (also referred as You) and Care Health Insurance Limited (also referred as Company/ We/Us), and all the Provisions of Indian Contract Act, 1872, shall hold good in this regard. The references to the singular include references to the plural; references to the male include the references to the female; and references to any statutory enactment include subsequent changes to the same and vice versa. The sentence construction and wordings in the Policy documents should be taken in its true sense and should not be taken in a way so as to take advantage of the Company by filing a claim which deviates from the purpose of Insurance.`,
-                benefits: `The insured person will have the option to port the policy to other insurers by applying to such insurer to port the entire policy along with all the members of the family, if any, at least 30 days before, but not earlier than 60 days from the policy renewal date as per IRDAI guidelines related to portability. If such person is presently covered and has been continuously covered without any lapses under any health insurance policy with an indian General/Health insurer, the proposed insured person will get the accrued continuity benefits as per IRDAI guidelines on portability.`,
+                description: `The proposal and declaration given by the proposer and other documents if any shall form the basis of this Contract and is deemed to be incorporated herein. The two parties to this contract are the Policy Holder/Insured/Insured Persons (also referred as You) and Care Health Insurance Limited (also referred as Company/ We/Us).`,
+                benefits: `The insured person will have the option to port the policy to other insurers by applying to such insurer to port the entire policy along with all the members of the family, if any, at least 30 days before, but not earlier than 60 days from the policy renewal date as per IRDAI guidelines related to portability.`,
                 subProducts: [
                   "Cashless Treatment",
                   "No Claim Bonus",
                   "Tax Benefits",
                 ],
                 heading: "CARE ADVANTAGE",
-                policyWordingUrl: "/pdfs/Care/CareAdvantagePolicywording.pdf", // Replace with the actual URL
-                brochureUrl: "/pdfs/Care/CareAdvantageBrochure.pdf", // Replace with the actual URL
-              },
-            },
-            {
-              name: "CARE FREEDOM",
-              details: {
-                youtubeLink: "https://www.youtube.com/embed/example1",
-                description: `The proposal and declaration given by the proposer and other documents if any shall form the basis of this Contract and is deemed to be incorporated herein. The two parties to this contract are the Policy Holder/Insured/Insured Persons (also referred as You) and Care Health Insurance Limited (also referred as Company/ We/Us), and all the Provisions of Indian Contract Act, 1872, shall hold good in this regard. The references to the singular include references to the plural; references to the male include the references to the female; and references to any statutory enactment include subsequent changes to the same and vice versa. The sentence construction and wordings in the Policy documents should be taken in its true sense and should not be taken in a way so as to take advantage of the Company by filing a claim which deviates from the purpose of Insurance.`,
-                benefits: `The insured person will have the option to migrate the
-policy to other health insurance products/plans offered
-by the company by applying for migration of the policy
-atleast 30 days before the policy renewal date as per
-IRDAI guidelines on Migration. lf such person is
-presently covered and has been continuously covered
-without any lapses under any health insurance
-product/plan offered by the company, the insured
-person will get the accrued continuity benefits as per
-IRDAI guidelines on migration`,
-                subProducts: [
-                  "Cashless Treatment",
-                  "No Claim Bonus",
-                  "Tax Benefits",
-                ],
-                heading: "CARE FREEDOM",
-                policyWordingUrl: "/pdfs/Care/CareFreedomPolicywording.pdf", // Replace with the actual URL
-                brochureUrl: "/pdfs/Care/CareFreedomBrochure.pdf", // Replace with the actual URL
-              },
-            },
-            {
-              name: "CARE",
-              details: {
-                youtubeLink: "https://www.youtube.com/embed/example1",
-                description: `The proposal and declaration given by the proposer and other documents if any shall form the basis of this Contract and is deemed to be incorporated herein. The two parties to this contract are the Policy Holder/Insured/Insured Persons (also referred as You) and Care Health Insurance Limited (also referred as Company/ We/Us), and all the Provisions of Indian Contract Act, 1872, shall hold good in this regard. The references to the singular include references to the plural; references to the male include the references to the female; and references to any statutory enactment include subsequent changes to the same and vice versa. The sentence construction and wordings in the Policy documents should be taken in its true sense and should not be taken in a way so as to take advantage of the Company by filing a claim which deviates from the purpose of Insurance.`,
-                benefits: `Any Claim paid for Benefits namely Benefit 1
-(Hospitalization Expenses), Benefit 2 (Pre
-Hospitalization Medical Expenses and Post
-Hospitalization Medical Expenses), Benefit 3
-(Daily Allowance), Benefit 4 (Ambulance
-Cover), Benefit 5 (Organ Donor Cover), Benefit 6
-(Domiciliary Hospitalization), Benefit 9
-(AYUSH Treatments), Benefit 11 (Global
-coverage (excluding U.S.A.), Benefit 13
-(Vaccination Cover), Benefit 14 (Care
-Anywhere), Benefit 15 (Maternity cover) and
-Optional Covers namely Optional Cover 1
-(Global Coverage – Total), Optional Cover 7
-(Smart Select), Optional Cover 13 (Extension of
-Global Coverage), and Optional Cover 14 (Air
-Ambulance Cover), shall reduce the Total Sum
-Insured for the Policy Year and only the balance
-shall be available for all the future claims for that
-Policy Year.`,
-                subProducts: [
-                  "Cashless Treatment",
-                  "No Claim Bonus",
-                  "Tax Benefits",
-                ],
-                heading: "CARE",
-                policyWordingUrl: "/pdfs/Care/CarePolicywording.pdf", // Replace with the actual URL
-                brochureUrl: "/pdfs/Care/CareBrochure.pdf", // Replace with the actual URL
-              },
-            },
-            {
-              name: "CARE PLUS YOUTH PLAN",
-              details: {
-                youtubeLink: "https://www.youtube.com/embed/example1",
-                description: `The proposal and declaration given by the proposer and other documents if any shall form the basis of this Contract and is deemed to be incorporated herein. The two parties to this contract are the Policy Holder/Insured/Insured Persons (also referred as You) and Care Health Insurance Limited (also referred as Company/ We/Us), and all the Provisions of Indian Contract Act, 1872, shall hold good in this regard. The references to the singular include references to the plural; references to the male include the references to the female; and references to any statutory enactment include subsequent changes to the same and vice versa. The sentence construction and wordings in the Policy documents should be taken in its true sense and should not be taken in a way so as to take advantage of the Company by filing a claim which deviates from the purpose of Insurance.`,
-                benefits: `The insured person will have the option to port the policy 
- to other insurers by applying to such insurer to port the 
- entire policy along with all the members of the family, if 
- any, at least 30 days before, but not earlier than 60 days 
- from the policy renewal date as per IRDAI guidelines  
- related to portability. lf such person is presently covered 
- and has been continuously covered without any lapses 
- under any health insurance policy with an Indian  
- General/Health insurer, the proposed insured person will 
- get the accrued continuity benefits in waiting periods as 
- per IRDAI guidelines on portability.`,
-                subProducts: [
-                  "Cashless Treatment",
-                  "No Claim Bonus",
-                  "Tax Benefits",
-                ],
-                heading: "CARE PLUS YOUTH PLAN",
-                policyWordingUrl: "/pdfs/Care/CarePlusPolicywording.pdf", // Replace with the actual URL
-                brochureUrl: "/pdfs/Care/CarePlusYouthBrochure.pdf", // Replace with the actual URL
-              },
-            },
-            {
-              name: "CARE PLUS COMPLETE PLAN",
-              details: {
-                youtubeLink: "https://www.youtube.com/embed/example1",
-                description: `The proposal and declaration given by the proposer and other documents if any shall form the basis of this Contract and is deemed to be incorporated herein. The two parties to this contract are the Policy Holder/Insured/Insured Persons (also referred as You) and Care Health Insurance Limited (also referred as Company/ We/Us), and all the Provisions of Indian Contract Act, 1872, shall hold good in this regard. The references to the singular include references to the plural; references to the male include the references to the female; and references to any statutory enactment include subsequent changes to the same and vice versa. The sentence construction and wordings in the Policy documents should be taken in its true sense and should not be taken in a way so as to take advantage of the Company by filing a claim which deviates from the purpose of Insurance.`,
-                benefits: `he insured person will have the option to port the policy 
- to other insurers by applying to such insurer to port the 
- entire policy along with all the members of the family, if 
- any, at least 30 days before, but not earlier than 60 days 
- from the policy renewal date as per IRDAI guidelines  
- related to portability. lf such person is presently covered 
- and has been continuously covered without any lapses 
- under any health insurance policy with an Indian  
- General/Health insurer, the proposed insured person will 
- get the accrued continuity benefits in waiting periods as 
- per IRDAI guidelines on portability.`,
-                subProducts: [
-                  "Cashless Treatment",
-                  "No Claim Bonus",
-                  "Tax Benefits",
-                ],
-                heading: "CARE PLUS COMPLETE PLAN",
-                policyWordingUrl: "/pdfs/Care/CarePlusPolicywording.pdf", // Replace with the actual URL
-                brochureUrl: "/pdfs/Care/CarePlusCompleteBrochure.pdf", // Replace with the actual URL
+                policyWordingUrl: "/pdfs/Care/CareAdvantagePolicywording.pdf",
+                brochureUrl: "/pdfs/Care/CareAdvantageBrochure.pdf",
               },
             },
           ],
@@ -334,33 +149,16 @@ Policy Year.`,
             {
               name: "OPTIMA RESTORE",
               details: {
-                youtubeLink:
-                  "https://www.youtube.com/embed/vXcEL9r3Roo?si=sKtpXCbs4FlgycJk&autoplay=1&mute=1&loop=1&playlist=vXcEL9r3Roo",
-                description: `This Policy is a contract of insurance issued by HDFC ERGO 
-General Insurance Company Limited (hereinafter called 
-the ‘Company’) to the proposer mentioned in the Policy 
-Schedule (hereinafter called the ‘Policyholder’) to cover the 
-person(s) named in the Policy Schedule (hereinafter called 
-the ‘Insured Person(s)’). The Policy is based on the statements 
-and declaration provided by the Policyholder in the Proposal 
-Form as well as in any welcome or other tele-verification 
-calls with the Company’s authorized person and is subject to 
-receipt of the requisite premium.`,
-                benefits: `The Insured Person will have the option to port the Policy to other insurers by applying to 
-such Insurer to port the entire policy along with all the members of the family, if any, at 
-least 45 days before, but not earlier than 60 days from the policy renewal date as per IRDAI 
-guidelines related to Portability. If such person is presently covered and has been 
-continuously covered without any lapses under any health insurance policy with an Indian 
-General/Health insurer, the proposed Insured Person will get the accrued continuity 
-benefits in waiting periods as per IRDAI guidelines on portability. `,
+                youtubeLink: "https://www.youtube.com/embed/vXcEL9r3Roo",
+                description: `This Policy is a contract of insurance issued by HDFC ERGO General Insurance Company Limited (hereinafter called the 'Company') to the proposer mentioned in the Policy Schedule (hereinafter called the 'Policyholder') to cover the person(s) named in the Policy Schedule (hereinafter called the 'Insured Person(s)').`,
+                benefits: `The Insured Person will have the option to port the Policy to other insurers by applying to such Insurer to port the entire policy along with all the members of the family, if any, at least 45 days before, but not earlier than 60 days from the policy renewal date as per IRDAI guidelines related to Portability.`,
                 subProducts: [
                   "Cashless Treatment",
                   "No Claim Bonus",
                   "Tax Benefits",
                 ],
                 heading: "OPTIMA RESTORE",
-                policyWordingUrl:
-                  "/pdfs/HDFC/Optima+Restore-Policy+Wording.pdf",
+                policyWordingUrl: "/pdfs/HDFC/Optima+Restore-Policy+Wording.pdf",
                 brochureUrl: "/pdfs/HDFC/Optima+Restore-Brochure.pdf",
               },
             },
@@ -368,151 +166,16 @@ benefits in waiting periods as per IRDAI guidelines on portability. `,
               name: "OPTIMA SECURE",
               details: {
                 youtubeLink: "https://www.youtube.com/embed/example1",
-                description: `This Policy is a contract of insurance issued by HDFC ERGO 
-General Insurance Company Limited (hereinafter called 
-the ‘Company’) to the proposer mentioned in the Policy 
-Schedule (hereinafter called the ‘Policyholder’) to cover the 
-person(s) named in the Policy Schedule (hereinafter called 
-the ‘Insured Person(s)’). The Policy is based on the statements 
-and declaration provided by the Policyholder in the Proposal 
-Form as well as in any welcome or other tele-verification 
-calls with the Company’s authorized person and is subject to 
-receipt of the requisite premium.`,
-                benefits: `The Insured Person will have the option to port the 
-Policy to other insurers by applying to such Insurer to 
-port the entire policy along with all the members of the 
-family, if any, at least 45 days before, but not earlier 
-than 60 days from the policy renewal date as per 
-IRDAI guidelines related to Portability. If such person is 
-presently covered and has been continuously covered 
-without any lapses under any health insurance policy 
-with an Indian General/Health insurer, the proposed 
-Insured Person will get the accrued continuity benefits 
-in waiting periods as per IRDAI guidelines on portability.`,
+                description: `This Policy is a contract of insurance issued by HDFC ERGO General Insurance Company Limited (hereinafter called the 'Company') to the proposer mentioned in the Policy Schedule (hereinafter called the 'Policyholder') to cover the person(s) named in the Policy Schedule.`,
+                benefits: `The Insured Person will have the option to port the Policy to other insurers by applying to such Insurer to port the entire policy along with all the members of the family, if any, at least 45 days before, but not earlier than 60 days from the policy renewal date as per IRDAI guidelines related to Portability.`,
                 subProducts: [
                   "Cashless Treatment",
                   "No Claim Bonus",
                   "Tax Benefits",
                 ],
                 heading: "OPTIMA SECURE",
-                policyWordingUrl: "/pdfs/HDFC/OptimaSecurePolicywording.pdf", // Replace with the actual URL
-                brochureUrl: "/pdfs/HDFC/OptimaSecureBrochure.pdf", // Replace with the actual URL
-              },
-            },
-            {
-              name: "MY HEALTH SURAKSHA GOLD",
-              details: {
-                youtubeLink: "https://www.youtube.com/embed/example1",
-                description: `We will provide insurance cover to the Insured Person(s) 
-under this Policy upto Sum Insured or limits mentioned on the 
-Schedule of Coverage in the Policy Schedule.
- This Policy is subject to Your statements in respect of all the 
-Insured Persons in Proposal form, declaration and/or medical 
-reports, payment of premium and the terms and conditions 
-of this Policy.`,
-                benefits: `The Insured Person will have the option to port the Policy to 
-other insurers by applying to such Insurer to port the entire 
-policy along with all the members of the family, if any, at least 
-45 days before, but not earlier than 60 days from the policy 
-renewal date as per IRDAI guidelines related to Portability. If 
-such person is presently covered and has been continuously 
-covered without any lapses under any health insurance policy 
-with an Indian General/Health insurer, the proposed Insured 
-Person will get the accrued continuity benefits in waiting 
-periods as per IRDAI guidelines on portability.`,
-                subProducts: [
-                  "Cashless Treatment",
-                  "No Claim Bonus",
-                  "Tax Benefits",
-                ],
-                heading: "MY HEALTH SURAKSHA GOLD",
-                policyWordingUrl:
-                  "/pdfs/HDFC/myHealthSurakshaPolicywording.pdf", // Replace with the actual URL
-                brochureUrl: "/pdfs/HDFC/myHealthSurakshaBrochure.pdf", // Replace with the actual URL
-              },
-            },
-            {
-              name: "ENERGY",
-              details: {
-                youtubeLink: "https://www.youtube.com/embed/example1",
-                description: `This Policy offers cover to individuals with Type 2 Diabetes Mellitus, Impaired Fasting Glucose (IFG), 
-Impaired Glucose Tolerance (IGT), Type 1 diabetes and/or Hypertension. The insurance cover is subject 
-to the terms, conditions and exclusions of this Policy, your payment of premium and realization 
-thereof by us and your statements in the proposal form which is the basis of this Policy.`,
-                benefits: `The insured person will have the option to port the policy to other insurers by applying to such 
-insurer to port the entire policy along with all the members of the family, if any, at least 45 days 
-before, but not earlier than 60 days from the policy renewal date as per IRDAI guidelines related 
-to portability. If such person is presently covered and has been continuously covered without any 
-lapses under any health insurance policy with an Indian General/Health insurer, the proposed 
-insured person will get the accrued continuity benefits in waiting periods as per IRDAI guidelines 
-on portability. `,
-                subProducts: [
-                  "Cashless Treatment",
-                  "No Claim Bonus",
-                  "Tax Benefits",
-                ],
-                heading: "ENERGY",
-                policyWordingUrl: "/pdfs/HDFC/EnergyPolicywording.pdf", // Replace with the actual URL
-                brochureUrl: "/pdfs/HDFC/EnergyBrochure.pdf", // Replace with the actual URL
-              },
-            },
-            {
-              name: "MEDISURE SUPER TOPUP",
-              details: {
-                youtubeLink: "https://www.youtube.com/embed/example1",
-                description: `We will provide insurance cover to the Insured Person(s) named in the Schedule subject to Your statements 
-in the Proposal Form, declaration and/or medical reports, payment of premium and the terms and conditions 
-of this Policy, ,  
-If during the Policy Period, You suffer from any Illness or Accident which requires Hospitalization as an 
-inpatient, We will reimburse the amount of such Medical Expenses as per the benefits given under 
-Section C – Scope of Covers, in excess of Aggregate Deductible and subject to a maximum of the Sum 
-Insured as stated in the Schedule. The liability of the Company to pay the admissible Claim under that 
-Policy Year will commence only once Aggregate Deductible has been exhausted. `,
-                benefits: `The Insured Person will have the option to port the Policy to other insurers by applying to such 
-Insurer to port the entire policy along with all the members of the family, if any, at least 45 days 
-before, but not earlier than 60 days from the policy renewal date as per IRDAI guidelines related to 
-Portability. If such person is presently covered and has been continuously covered without any 
-lapses under any health insurance policy with an Indian General/Health insurer, the proposed 
-Insured Person will get the accrued continuity benefits in waiting periods as per IRDAI guidelines 
-on portability. `,
-                subProducts: [
-                  "Cashless Treatment",
-                  "No Claim Bonus",
-                  "Tax Benefits",
-                ],
-                heading: "MEDISURE SUPER TOPUP",
-                policyWordingUrl:
-                  "/pdfs/HDFC/myHealthMedisurTopupPolicywording.pdf", // Replace with the actual URL
-                brochureUrl: "/pdfs/HDFC/myHealthMedisureTopupBrochure.pdf", // Replace with the actual URL
-              },
-            },
-          ],
-        },
-        {
-          name: "INDIVIDUAL PERSONAL ACCIDENT [IPA]",
-          cities: [
-            {
-              name: "MY HEALTH KOTY SURAKSHA",
-              details: {
-                youtubeLink: "https://www.youtube.com/embed/example1",
-                description: `We will provide Insurance coverage to the Insured Person(s) under this Policy up to Sum Insured including Cumulative Bonus as 
-applicable and subject to waiting periods, limits, Procedure sub-limits, Co-payment,Deductible, Aggregate Deductible as specified 
-on the Schedule of Coverage in the Policy Schedule.The Policy is based on  statements, disclosures, declarations made in the Proposal 
-form andMedical reports. `,
-                benefits: `The Insured Person will have the option to port the Policy to other insurers by applying to such Insurer to port the entire 
-policy along with all the members of the family, if any, at least 45 days before, but not earlier than 60 days from the policy 
-renewal date as per IRDAI guidelines related to Portability. If such person is presently covered and has been continuously 
-covered without any lapses under any health insurance policy with an Indian General/Health insurer, the proposed Insured 
-Person will get the accrued continuity benefits in waiting periods as per IRDAI guidelines on portability. `,
-                subProducts: [
-                  "Cashless Treatment",
-                  "No Claim Bonus",
-                  "Tax Benefits",
-                ],
-                heading: "MY HEALTH KOTY SURAKSHA",
-                policyWordingUrl:
-                  "/pdfs/HDFC/myHealthKotiSurakshaPolicywording.pdf", // Replace with the actual URL
-                brochureUrl: "/pdfs/HDFC/myHealthKotiSurakshaBrochure.pdf", // Replace with the actual URL
+                policyWordingUrl: "/pdfs/HDFC/OptimaSecurePolicywording.pdf",
+                brochureUrl: "/pdfs/HDFC/OptimaSecureBrochure.pdf",
               },
             },
           ],
@@ -521,9 +184,9 @@ Person will get the accrued continuity benefits in waiting periods as per IRDAI 
     },
   ];
 
-  const [country, setCountry] = useState("---Country---");
-  const [state, setState] = useState("---state---");
-  const [city, setCity] = useState("---city---");
+  const [country, setCountry] = useState("");
+  const [state, setState] = useState("");
+  const [city, setCity] = useState("");
   const [states, setStates] = useState([]);
   const [cities, setCities] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -534,9 +197,9 @@ Person will get the accrued continuity benefits in waiting periods as per IRDAI 
       (ctr) => ctr.name === event.target.value
     );
     setStates(selectedCountry?.states || []);
-    setState("---state---");
+    setState("");
     setCities([]);
-    setCity("---city---");
+    setCity("");
     setSelectedProduct(null);
   };
 
@@ -544,7 +207,7 @@ Person will get the accrued continuity benefits in waiting periods as per IRDAI 
     setState(event.target.value);
     const selectedState = states.find((st) => st.name === event.target.value);
     setCities(selectedState?.cities || []);
-    setCity("---city---");
+    setCity("");
     setSelectedProduct(null);
   };
 
@@ -554,20 +217,24 @@ Person will get the accrued continuity benefits in waiting periods as per IRDAI 
     setSelectedProduct(selectedCity?.details || null);
   };
 
- return (
+  return (
     <section className="policy-brochure">
-  <div className="policy-brochure__heading">
-    <h2>Our Brochure</h2>
-    <span className="heading-line"></span>
-  </div>
+      <div className="policy-brochure__heading">
+        <h2>Our Brochure</h2>
+        <span className="heading-line"></span>
+      </div>
 
       <div className="policy-brochure__wrapper">
-
         {/* FILTER BAR */}
         <div className="policy-brochure__filters">
           <div className="policy-select-wrapper">
-            <select value={country} onChange={changeCountry}>
-              <option>Company test</option>
+            <label htmlFor="company-select">Select Company</label>
+            <select 
+              id="company-select"
+              value={country} 
+              onChange={changeCountry}
+            >
+              <option value="">Choose a company...</option>
               {countries.map((ctr) => (
                 <option key={ctr.name} value={ctr.name}>
                   {ctr.name}
@@ -578,8 +245,14 @@ Person will get the accrued continuity benefits in waiting periods as per IRDAI 
           </div>
 
           <div className="policy-select-wrapper">
-            <select value={state} onChange={changeState}>
-              <option>Insurance Type</option>
+            <label htmlFor="type-select">Insurance Type</label>
+            <select 
+              id="type-select"
+              value={state} 
+              onChange={changeState}
+              disabled={!country}
+            >
+              <option value="">Select insurance type...</option>
               {states.map((st) => (
                 <option key={st.name} value={st.name}>
                   {st.name}
@@ -590,8 +263,14 @@ Person will get the accrued continuity benefits in waiting periods as per IRDAI 
           </div>
 
           <div className="policy-select-wrapper">
-            <select value={city} onChange={changeCity}>
-              <option>Policy</option>
+            <label htmlFor="policy-select">Select Policy</label>
+            <select 
+              id="policy-select"
+              value={city} 
+              onChange={changeCity}
+              disabled={!state}
+            >
+              <option value="">Choose a policy...</option>
               {cities.map((ct) => (
                 <option key={ct.name} value={ct.name}>
                   {ct.name}
@@ -605,42 +284,112 @@ Person will get the accrued continuity benefits in waiting periods as per IRDAI 
         {/* POLICY CARD */}
         {selectedProduct && (
           <div className="policy-card">
-            <h2 className="policy-title">{selectedProduct.heading}</h2>
+            {/* Card Header */}
+            <div className="policy-card-header">
+              <div className="policy-card-header__badge">
+                <FiFileText style={{ display: 'inline', marginRight: '5px' }} />
+                POLICY DOCUMENTATION
+              </div>
+              <h2 className="policy-title">{selectedProduct.heading}</h2>
+            </div>
 
+            {/* Card Content */}
             <div className="policy-content">
-              <p>
-                <strong>PREAMBLE:</strong> {selectedProduct.description}
-              </p>
-              <p>
-                <strong>BENEFITS:</strong> {selectedProduct.benefits}
-              </p>
-            </div>
+              {/* Preamble Section */}
+              <div className="policy-content-section">
+                <h3 className="policy-section-title">Policy Overview</h3>
+                <p>{selectedProduct.description}</p>
+              </div>
 
-            <div className="policy-actions">
-              <a
-                href={selectedProduct.policyWordingUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
-                Policy Wording
-              </a>
+              {/* Benefits Section */}
+              <div className="policy-content-section">
+                <h3 className="policy-section-title">Key Benefits</h3>
+                <p>{selectedProduct.benefits}</p>
+              </div>
 
-              <a
-                href={selectedProduct.brochureUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary"
-              >
-                View Policy Brochure
-              </a>
+              {/* Features Section */}
+              <div className="policy-content-section">
+                <h3 className="policy-section-title">Product Features</h3>
+                <div className="policy-features">
+                  {selectedProduct.subProducts.map((feature, idx) => (
+                    <div key={idx} className="policy-feature-item">
+                      <FiCheckCircle className="feature-icon" />
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Download Section */}
+              <div className="policy-download-section">
+                <div className="download-header">
+                  <div className="download-icon-box">
+                    <FiDownload />
+                  </div>
+                  <div className="download-header-text">
+                    <h3>Download Policy Documents</h3>
+                    <p>Access complete policy details and brochures</p>
+                  </div>
+                </div>
+
+                <div className="download-cards-grid">
+                  <a
+                    href={selectedProduct.policyWordingUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="download-card card-primary"
+                  >
+                    <div className="download-card-content">
+                      <div className="download-card-icon">
+                        <FiFileText />
+                      </div>
+                      <div className="download-card-text">
+                        <h4>Policy Wording</h4>
+                        <p>Complete terms & conditions</p>
+                      </div>
+                    </div>
+                    <FiDownload className="download-arrow" />
+                  </a>
+
+                  <a
+                    href={selectedProduct.brochureUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="download-card card-secondary"
+                  >
+                    <div className="download-card-content">
+                      <div className="download-card-icon">
+                        <FiFileText />
+                      </div>
+                      <div className="download-card-text">
+                        <h4>Policy Brochure</h4>
+                        <p>Quick reference guide</p>
+                      </div>
+                    </div>
+                    <FiDownload className="download-arrow" />
+                  </a>
+                </div>
+              </div>
             </div>
+          </div>
+        )}
+
+        {/* EMPTY STATE */}
+        {!selectedProduct && (
+          <div className="policy-empty-state">
+            <div className="empty-state-icon">
+              <FiFileText />
+            </div>
+            <h3>Select a Policy to View Details</h3>
+            <p>
+              Choose a company, insurance type, and policy from the filters above 
+              to view comprehensive policy information and download brochures.
+            </p>
           </div>
         )}
       </div>
     </section>
-);
-
+  );
 };
 
 export default PolicyBrochure;

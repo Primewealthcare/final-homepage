@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
-import logo from "../IMG/logo.png";
+import logo from "../IMG/Leaders/OptimizedLeaders/logo-ezgif-removebg.png";
 import facebook from "../IMG/facebook.png";
 import instagram from "../IMG/instagram.png";
 import linkedin from "../IMG/linkedin.png";

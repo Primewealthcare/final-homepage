@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import Piyush from "../IMG/Piyush.png"
-
+// import Piyush from "../IMG/Piyush.png"
+import Piyush from "../IMG/Leaders/OptimizedLeaders/PIYUSHPANDYA-ezgif-removebg.png"
 import CountUp from "react-countup";
-import phonee from "../IMG/phonee.gif";
-import Policy from "../IMG/Animatedicon/Policy.gif";
-import Moneybag from "../IMG/Animatedicon/Moneybag.gif" 
+import phonee from "../IMG/Animatedicon/OptimizedGifs/phonee-ezgif.webp";
+import Policy from "../IMG/Animatedicon/OptimizedGifs/Policy-ezgif.webp";
+import Moneybag from "../IMG/Animatedicon/OptimizedGifs/Moneybag-ezgif.webp" 
 
 import WhatsAppBtnn from ".///../IMG/WhatsAppBtnn.png"
 
@@ -217,7 +217,7 @@ useEffect(() => {
       <div className="livechat">
         <a
           aria-label="Chat on WhatsApp"
-          href="https://wa.me/919104105104?text= hello, I have a question "
+          href="https://wa.me/919725655005?text= hello, I have a question "
           target="_blank"
           rel="noopener noreferrer"
         >

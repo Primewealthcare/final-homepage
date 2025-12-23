@@ -1,12 +1,12 @@
 import React from "react";
-import Workman from "../IMG/Animatedicon/Workman.gif";
-import CarAccident from "../IMG/Animatedicon/CarAccident.gif";
-import LifeInsiurance from "../IMG/Animatedicon/LifeInsiurance.gif";
-import Medical from "../IMG/Animatedicon/Medical.gif";
-import CarInsurance from "../IMG/Animatedicon/CarInsurance.gif";
-import Moneytransit from "../IMG/Animatedicon/Moneytransit.gif";
-import FireInsurance from "../IMG/Animatedicon/FireInsurance.gif";
-import Home from "../IMG/Animatedicon/Home.gif"
+import Workman from "../IMG/Animatedicon/OptimizedGifs/Workman-ezgif.webp";
+import CarAccident from "../IMG/Animatedicon/OptimizedGifs/CarAccident-ezgif.webp";
+import LifeInsiurance from "../IMG/Animatedicon/OptimizedGifs/Home-ezgif.webp";
+import Medical from "../IMG/Animatedicon/OptimizedGifs/Medical-ezgif.webp";
+import CarInsurance from "../IMG/Animatedicon/OptimizedGifs/CarInsurance-ezgif.webp";
+import Moneytransit from "../IMG/Animatedicon/OptimizedGifs/Moneytransit-ezgif.webp";
+import FireInsurance from "../IMG/Animatedicon/OptimizedGifs/FireInsurance-ezgif.webp";
+import Home from "../IMG/Animatedicon/OptimizedGifs/Home-ezgif.webp";
 
 import WhatsAppBtnn from ".///../IMG/WhatsAppBtnn.png"
 
@@ -278,7 +278,7 @@ Professional Insurance Services You Can Trust
         <div className="livechat">
         <a 
           aria-label="Chat on WhatsApp" 
-          href="https://wa.me/919104105104?text= hello, I have a question "   
+          href="https://wa.me/919725655005?text= hello, I have a question "   
           target="_blank"
           rel="noopener noreferrer"
         >

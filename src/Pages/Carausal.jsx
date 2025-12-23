@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import carousal3 from '../IMG/Company/carousal3.webp'
+import carousal2 from '../IMG/Company/carousel-2.webp'
+import carousal1 from '../IMG/Company/carousel-1.webp'
+
 
 // Add this component at the top of your Home.js file or create a separate file
 const ModernCarousel = ({ heroimg324 }) => {
@@ -8,19 +12,19 @@ const ModernCarousel = ({ heroimg324 }) => {
 
   const slides = [
     {
-      image: heroimg324,
+      image: carousal1,
       title: "With The Right Planning, You THRIVE!",
       subtitle: "Planning Se, Sab Mumkin Hai!",
       theme: "dark"
     },
     {
-    image: "img/carousel-2.jpg",
+    image: carousal2,
     title: "Safeguarding What Matters Most",
     subtitle: "Aaj ki planning, kal ka protection",
     theme: "light"
   },
   {
-    image: "img/carousal3.jpg",
+    image:carousal3,
     title: "Strong Foundations. Secure Futures.",
     subtitle: "Planning jo aapke saath chale",
     theme: "light"

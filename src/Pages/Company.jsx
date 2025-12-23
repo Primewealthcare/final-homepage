@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import GCLOGO from "../IMG/Company/gc_logo.png";
-import first from "../IMG/Company/first.gif";
-import TATAAIG from "../IMG/Company/TATAAIG.svg";
-import HDFCERGO from "../IMG/Company/HDFCERGO.svg";
-import LICLOGO from "../IMG/Company/LICLOGO.svg";
-import CARE from "../IMG/Company/CARE.svg";
-import ICICIlombard from "../IMG/Company/ICICIlombard.svg";
-import IFFCO from "../IMG/Company/IFFCO.svg";
-import NIVBHUPA from "../IMG/Company/NIVBHUPA.svg";
+import first from "../IMG/Leaders/OptimizedLeaders/first-ezgif-removebg.png"
+import TATAAIG from "../IMG/Company/OptimizedCompany/TATAAIG.webp";
+import HDFCERGO from "../IMG/Company/OptimizedCompany/HDFCERGO.webp";
+import LICLOGO from "../IMG/Company/OptimizedCompany/LICLOGO.webp";
+import CARE from "../IMG/Company/OptimizedCompany/CARE.webp";
+import ICICIlombard from "../IMG/Company/OptimizedCompany/ICICIlombard.png";
+import IFFCO from "../IMG/Company/OptimizedCompany/IFFCO.webp";
+import NIVBHUPA from "../IMG/Company/OptimizedCompany/NIVBHUPA.webp";
 
 import WhatsAppBtnn from ".///../IMG/WhatsAppBtnn.png";
 

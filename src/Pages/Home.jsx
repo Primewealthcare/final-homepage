@@ -6,14 +6,14 @@ import Service from "./Service";
 import Company from "./Company";
 import Appointment from "./Appointment";
 
-import PIYUSHPANDYA from "../IMG/Leaders/PIYUSHPANDYA.svg";
-import DARSHNAPANDYA from "../IMG/Leaders/DARSHNAPANDYA.svg";
-import PARULPANDYA from "../IMG/Leaders/PARULPANDYA.svg";
-import MITSUMAM from "../IMG/Leaders/MITSUMAM.svg";
+import PIYUSHPANDYA from "../IMG/Leaders/OptimizedLeaders/PIYUSHPANDYA-ezgif-removebg.png"
+import DARSHNAPANDYA from "../IMG/Leaders/OptimizedLeaders/DARSHNAPANDYA-ezgif-removebg.png";
+import PARULPANDYA from "../IMG/Leaders/OptimizedLeaders/PARULPANDYA-ezgif-removebg-preview.png";
+import MITSUMAM from "../IMG/Leaders/OptimizedLeaders/MITSUMAM-ezgif-removebg.png";
 import BHARATSINH from "../IMG/Leaders/BHARATSINH.svg";
 import HITESHKHERADIYA from "../IMG/Leaders/HITESHKHERADIYA.svg";
-import MEHUL from "../IMG/Leaders/MEHUL.svg";
-import PRATIKSIR from "../IMG/Leaders/PRATIKSIR.svg";
+import MEHUL from "../IMG/Leaders/OptimizedLeaders/MEHUL-ezgif-removebg.png";
+import PRATIKSIR from "../IMG/Leaders/OptimizedLeaders/PRATIKSIR-ezgif-removebg-preview.png";
 
 import WhatsAppBtnn from ".///../IMG/WhatsAppBtnn.png";
 import PolicyBrochure from "./PolicyBrochure";
@@ -487,115 +487,80 @@ function Home() {
 
       {/* Leaders module start  */}
       <div className="testimonial-section py-5">
-      <div>
-        <div className="container-xxl">
-          <div className="container">
-            <div className="text-center mx-auto" style={{ maxWidth: 700 }}>
-              <h1 className="display-6 mb-5">
-                What They Say About Our Insurance
-              </h1>
+  <div className="container-xxl">
+    <div className="container">
+      <div className="text-center mx-auto" style={{ maxWidth: 700 }}>
+        <h1 className="display-6 mb-5">
+          What They Say About Our Insurance
+        </h1>
+      </div>
+      
+      <div className="row">
+        <div className="col-12">
+          <div className="owl-carousel testimonial-carousel">
+            
+            {/* Testimonial 1 */}
+            <div className="testimonial-item text-center">
+              <img
+                className="img-fluid rounded-circle mx-auto mb-3"
+                src={MEHUL}
+                alt="Mehul Pradhan"
+              />
+              <p className="fs-5 px-3">
+                Commercial Properties, Assets, Factories, Ports, Airports, Stock of Industrial Goods, Professional services require a cover in case of Natural Catastrophes or accidents or errors in case of Professional services. Insurance is vital for ensuring safety, security & financial support during such unexpected events.
+              </p>
+              <h5>Mehul Pradhan</h5>
+              <span>SME-Retail Head</span>
             </div>
-            <div className="row g-5">
-              <div className="col-lg-3 d-none d-lg-block">
-                <div className="testimonial-left h-100">
-                  {/* <img className="img-fluid animated pulse infinite" src={Bharatsinh} alt />
-          <img className="img-fluid animated pulse infinite" src={Hitesh_Kheradiya} alt />
-          <img className="img-fluid animated pulse infinite" src={satish} alt /> */}
-                </div>
-              </div>
-              <div className="col-lg-10 mx-auto wow fadeIn" data-wow-delay="0.5s">
 
-                <div className="owl-carousel testimonial-carousel">
-                  <div className="testimonial-item text-center">
-                    <img
-                      className="img-fluid rounded mx-auto mb-4"
-                      src={MEHUL}
-                      alt
-                    />
-                    <p className="fs-5">
-                      Commercial Properties, Assests, Factories, Ports,
-                      Airports, Stock of Industrial Goods, Professional services
-                      require a cover in case of Natural Castotrophies or
-                      accidents or errors in case of Professional services.
-                      Insurance is vital for ensuring safety, security & a
-                      financial support during such unexpected events.
-                    </p>
-                    <h5>Mehul Pradhan</h5>
-                    <span>SME-Retail Head</span>
-                  </div>
-                  <div className="testimonial-item text-center">
-                    <img
-                      className="img-fluid rounded mx-auto mb-4"
-                      src={HITESHKHERADIYA}
-                      alt
-                    />
-                    <p className="fs-5">
-                      Reduces Debt Risks: Medical debt is one of the leading
-                      causes of bankruptcy. Health insurance helps prevent this
-                      by covering significant portions of medical expenses,
-                      reducing the likelihood of debt.
-                    </p>
-                    <h5>Hitesh Kheradiya</h5>
-                    <span>Leader (Surat)</span>
-                  </div>
-                  <div className="testimonial-item text-center">
-                    <img
-                      className="img-fluid rounded mx-auto mb-4"
-                      src={BHARATSINH}
-                      alt
-                    />
-                    <p className="fs-5">
-                      Health Insurance Covers medical costs that could otherwise
-                      be financially devastating for individuals and families.
-                      This includes Hospitalisaton following an illness /
-                      accident / Pregnacy, Pre & Post Hospitalisation, OPD
-                      treatment expenses, etc. Health Insurance Policies helps
-                      in maintaining physical, financial & emotional well-being.
-                    </p>
-                    <h5>Bharatsinh Solanki</h5>
-                    <span>Leader (Bhavnagar, Rajkot)</span>
-                  </div>
-                  {/* <div className="testimonial-item text-center">
-            <img className="img-fluid rounded mx-auto mb-4" src={satish_jani} alt />
-            <p className="fs-5">
-            Helth insurance must be in human life value Nobody have plan of Express of emergency hospitalisation  💡
-            </p>
-            <h5>Satish Jani</h5>
-            <span>Leader (Vadodara)</span>
-          </div> */}
-                  <div className="testimonial-item text-center">
-                    <img
-                      className="img-fluid rounded mx-auto mb-4"
-                      src={PRATIKSIR}
-                      alt
-                    />
-                    <p className="fs-5">
-                      “Mediclaim policy means the security of your savings. we
-                      provide the best mediclaim policy in India, offering
-                      comprehensive, 24/7 risk coverage to protect you and your
-                      family. Our policies cover a wide range of medical needs,
-                      ensuring full support during any medical emergency with
-                      the largest support system and expert guidance. Choose
-                      Prime Wealth Care Solutions and secure your future with
-                      trusted coverage and peace of mind.”
-                    </p>
-                    <h5>Pratik Barot</h5>
-                    <span>Leader (Ahmedabad/Vadodara)</span>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-3 d-none d-lg-block">
-                <div className="testimonial-right h-100 ">
-                  {/* <img className="img-fluid animated pulse infinite" src={amit_solanki} alt />
-          <img className="img-fluid animated pulse infinite" src={pratik} alt />
-          <img className="img-fluid animated pulse infinite" src={Mehul_Pradhan} alt /> */}
-                </div>
-              </div>
+            {/* Testimonial 2 */}
+            <div className="testimonial-item text-center">
+              <img
+                className="img-fluid rounded-circle mx-auto mb-3"
+                src={HITESHKHERADIYA}
+                alt="Hitesh Kheradiya"
+              />
+              <p className="fs-5 px-3">
+                Reduces Debt Risks: Medical debt is one of the leading causes of bankruptcy. Health insurance helps prevent this by covering significant portions of medical expenses, reducing the likelihood of debt.
+              </p>
+              <h5>Hitesh Kheradiya</h5>
+              <span>Leader (Surat)</span>
             </div>
+
+            {/* Testimonial 3 */}
+            <div className="testimonial-item text-center">
+              <img
+                className="img-fluid rounded-circle mx-auto mb-3"
+                src={BHARATSINH}
+                alt="Bharatsinh Solanki"
+              />
+              <p className="fs-5 px-3">
+                Health Insurance Covers medical costs that could otherwise be financially devastating for individuals and families. This includes Hospitalisation following an illness / accident / Pregnancy, Pre & Post Hospitalisation, OPD treatment expenses, etc. Health Insurance Policies helps in maintaining physical, financial & emotional well-being.
+              </p>
+              <h5>Bharatsinh Solanki</h5>
+              <span>Leader (Bhavnagar, Rajkot)</span>
+            </div>
+
+            {/* Testimonial 4 */}
+            <div className="testimonial-item text-center">
+              <img
+                className="img-fluid rounded-circle mx-auto mb-3"
+                src={PRATIKSIR}
+                alt="Pratik Barot"
+              />
+              <p className="fs-5 px-3">
+                "Mediclaim policy means the security of your savings. We provide the best mediclaim policy in India, offering comprehensive, 24/7 risk coverage to protect you and your family. Our policies cover a wide range of medical needs, ensuring full support during any medical emergency with the largest support system and expert guidance. Choose Prime Wealth Care Solutions and secure your future with trusted coverage and peace of mind."
+              </p>
+              <h5>Pratik Barot</h5>
+              <span>Leader (Ahmedabad/Vadodara)</span>
+            </div>
+
           </div>
         </div>
       </div>
-      </div>
+    </div>
+  </div>
+</div>
       <PolicyBrochure/>
 
       {/* Leaders module END  */}
@@ -604,7 +569,7 @@ function Home() {
       <div className="livechat">
         <a
           aria-label="Chat on WhatsApp"
-          href="https://wa.me/919104105104?text= hello, I have a question "
+          href="https://wa.me/919725655005?text= hello, I have a question "
           target="_blank"
           rel="noopener noreferrer"
         >

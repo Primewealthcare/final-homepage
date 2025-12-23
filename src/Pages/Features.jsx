@@ -1,9 +1,9 @@
 import React from "react";
-import Feature from "../IMG/Feature.jpeg";
+import Feature from "../IMG/FeatureOptimized.webp";
 import Mail from "../IMG/Animatedicon/Mail.gif";
-import Process from "../IMG/Animatedicon/Process.gif";
-import Savings from "../IMG/Animatedicon/Savings.gif";
-import Setings from "../IMG/Animatedicon/Setings.gif";
+import Process from "../IMG/Animatedicon/OptimizedGifs/Process-ezgif.webp";
+import Savings from "../IMG/Animatedicon/OptimizedGifs/Savings-ezgif.webp";
+import Setings from "../IMG/Animatedicon/OptimizedGifs/Setings-ezgif.com-gif-to-webp-converter.webp";
 
 import WhatsAppBtnn from "../IMG/WhatsAppBtnn.png";
 
@@ -112,7 +112,7 @@ function Features() {
       <div className="livechat">
         <a
           aria-label="Chat on WhatsApp"
-          href="https://wa.me/919104105104?text=hello, I have a question"
+          href="https://wa.me/919725655005?text=hello, I have a question"
           target="_blank"
           rel="noopener noreferrer"
         >

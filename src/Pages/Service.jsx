@@ -167,9 +167,7 @@ Professional Insurance Services You Can Trust
                   <h4 className="mb-0">Money In Transit Insurance</h4>
                 </div>
                 <p classname="mb-4">
-                  Provides Coverage Against Loss Of Cash Or Currency Whilst In
-                  Transit As Well As In Your Premises Due To Accident Or
-                  Misfortune.
+                  Financial Coverage Against Unforseen Events Suggest Accident Causing Vehicles Damages.
                 </p>
                 <div className="text-center">
                   <a className="btn btn-light px-3" href="tel:+91 9104105104">

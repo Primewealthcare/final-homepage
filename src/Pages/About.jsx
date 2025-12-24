@@ -1,57 +1,53 @@
 import React, { useEffect } from "react";
 // import Piyush from "../IMG/Piyush.png"
-import Piyush from "../IMG/Leaders/OptimizedLeaders/PIYUSHPANDYA-ezgif-removebg.png"
+import Piyush from "../IMG/Leaders/OptimizedLeaders/PIYUSHPANDYA-ezgif-removebg.png";
 import CountUp from "react-countup";
 import phonee from "../IMG/Animatedicon/OptimizedGifs/phonee-ezgif.webp";
 import Policy from "../IMG/Animatedicon/OptimizedGifs/Policy-ezgif.webp";
-import Moneybag from "../IMG/Animatedicon/OptimizedGifs/Moneybag-ezgif.webp" 
+import Moneybag from "../IMG/Animatedicon/OptimizedGifs/Moneybag-ezgif.webp";
 
-import WhatsAppBtnn from ".///../IMG/WhatsAppBtnn.png"
+import WhatsAppBtnn from ".///../IMG/WhatsAppBtnn.png";
 
 import { useRef, useState } from "react";
 
-
 function About() {
-  
   useEffect(() => {
-  const elements = document.querySelectorAll(".reveal");
+    const elements = document.querySelectorAll(".reveal");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
+  const [startCount, setStartCount] = useState(false);
+  const counterRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("active");
+          setStartCount(true);
+          observer.disconnect(); // run only once
         }
-      });
-    },
-    { threshold: 0.15 }
-  );
+      },
+      { threshold: 0.3 }
+    );
 
-  elements.forEach((el) => observer.observe(el));
+    if (counterRef.current) observer.observe(counterRef.current);
 
-  return () => observer.disconnect();
-}, []);
-
-
-const [startCount, setStartCount] = useState(false);
-const counterRef = useRef(null);
-
-useEffect(() => {
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        setStartCount(true);
-        observer.disconnect(); // run only once
-      }
-    },
-    { threshold: 0.3 }
-  );
-
-  if (counterRef.current) observer.observe(counterRef.current);
-
-  return () => observer.disconnect();
-}, []);
-
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div>
@@ -64,7 +60,6 @@ useEffect(() => {
           <div className="row g-5">
             <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
               <div className="position-relative rounded about-image-wrapper">
-
                 <img
                   className="sirimg reveal"
                   src={Piyush}
@@ -90,7 +85,7 @@ useEffect(() => {
                 <h1 className="display-6 mb-5 reveal">
                   We're Here To Assist You With Exploring Protection
                 </h1>
-                <p className="fs-5 reveal mb-4">
+                <p className="reveal mt-5 mb-4" sx={{fontSize:"20px"}}>
                   Life is full of unexpected changes, and your insurance should
                   adapt with you. At Prime Wealthcare Solution , we believe that
                   one size doesn’t fit all. That’s why we offer Flexible
@@ -125,8 +120,8 @@ useEffect(() => {
                       height="40px"
                       alt
                     />
-                    <h5 className="mb-0">
-                      <a href="tel:+91 9104105104" class="text-dark mb-0">
+                    <h5 className="mb-0 phone_no">
+                      <a href="tel:+91 9104105104" class="text-dark">
                         Call Us: +91 9 104 105 104
                       </a>
                     </h5>
@@ -138,7 +133,7 @@ useEffect(() => {
         </div>
       </div>
 
-      <div className="container-fluid overflow-hidden my-5 px-lg-0">
+      <div className="container-fluid overflow-hidden">
         <div className="container facts px-lg-0">
           <div className="row g-0 mx-lg-0">
             <div
@@ -164,7 +159,7 @@ useEffect(() => {
                 </p>
                 <a
                   href="tel:+91 9104105104"
-                  className="align-self-start btn btn-primary py-3 px-5"
+                  className="align-self-start btn btn-primary py-3 mt-4 px-5"
                 >
                   More Details
                 </a>
@@ -174,40 +169,42 @@ useEffect(() => {
               className="col-lg-6 facts-counter wow fadeInUp"
               data-wow-delay="0.5s"
             >
-               <div ref={counterRef} className="h-100 px-4 pe-lg-0 align-item-center">
-  <div className="row g-5 text-center">
+              <div
+                ref={counterRef}
+                className="h-100 px-4 pe-lg-0 align-item-center"
+              >
+                <div className="row g-5 text-center">
+                  <div className="col-sm-6">
+                    <h1 className="display-5">
+                      {startCount && <CountUp end={10000} duration={5} />}
+                    </h1>
+                    <p className="fs-5 text-dark">Happy Clients</p>
+                  </div>
 
-    <div className="col-sm-6">
-      <h1 className="display-5">
-        {startCount && <CountUp end={10000} duration={5} />}
-      </h1>
-      <p className="fs-5 text-dark">Happy Clients</p>
-    </div>
+                  <div className="col-sm-6">
+                    <h1 className="display-5">
+                      {startCount && (
+                        <CountUp end={65000000} duration={5} separator="," />
+                      )}
+                    </h1>
+                    <p className="fs-5 text-dark">Approved Claim Amount</p>
+                  </div>
 
-    <div className="col-sm-6">
-      <h1 className="display-5">
-        {startCount && <CountUp end={65000000} duration={5} separator="," />}
-      </h1>
-      <p className="fs-5 text-dark">Approved Claim Amount</p>
-    </div>
+                  <div className="col-sm-6">
+                    <h1 className="display-5">
+                      {startCount && <CountUp end={30} duration={6} />}
+                    </h1>
+                    <p className="fs-5 text-dark">Awards Achieved</p>
+                  </div>
 
-    <div className="col-sm-6">
-      <h1 className="display-5">
-        {startCount && <CountUp end={30} duration={6} />}
-      </h1>
-      <p className="fs-5 text-dark">Awards Achieved</p>
-    </div>
-
-    <div className="col-sm-6">
-      <h1 className="display-5">
-        {startCount && <CountUp end={130} duration={6} />}
-      </h1>
-      <p className="fs-5 text-dark">Team Members</p>
-    </div>
-
-  </div>
-</div>
-
+                  <div className="col-sm-6">
+                    <h1 className="display-5">
+                      {startCount && <CountUp end={130} duration={6} />}
+                    </h1>
+                    <p className="fs-5 text-dark">Team Members</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -23,7 +23,6 @@ function Navbar() {
   const [showNavbar, setShowNavbar] = useState(true);
   const lastScrollY = useRef(0);
 
-
   const mobileMenuRef = useRef(null);
   const mobileToggleRef = useRef(null);
 
@@ -40,30 +39,29 @@ function Navbar() {
   };
 
   useEffect(() => {
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY;
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
 
-    // Glass effect
-    setScrolled(currentScrollY > 50);
+      // Glass effect
+      setScrolled(currentScrollY > 50);
 
-    // Ignore micro scrolls
-    if (Math.abs(currentScrollY - lastScrollY.current) < 10) return;
+      // Ignore micro scrolls
+      if (Math.abs(currentScrollY - lastScrollY.current) < 10) return;
 
-    // Hide on scroll down, show on scroll up
-    if (currentScrollY > lastScrollY.current && currentScrollY > 120) {
-      setShowNavbar(false);
-    } else {
-      setShowNavbar(true);
-    }
+      // Hide on scroll down, show on scroll up
+      if (currentScrollY > lastScrollY.current && currentScrollY > 120) {
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
+      }
 
-    lastScrollY.current = currentScrollY;
-  };
+      lastScrollY.current = currentScrollY;
+    };
 
-  window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
-
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -356,7 +354,7 @@ function Navbar() {
                   </a>
                 </div>
                 <a
-                  href="https://primewealthcare.in/"
+                  href="#"
                   className="btn"
                   target="_blank"
                   rel="noreferrer"
@@ -390,46 +388,45 @@ function Navbar() {
 
             {/* Mobile Toggle */}
             <button
-  ref={mobileToggleRef}
-  type="button"
-  className={`mobile-toggle d-lg-none ms-auto ${
-    isMobileMenuOpen ? "open" : ""
-  }`}
-  onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-  aria-label="Toggle navigation"
->
-  <span />
-  <span />
-  <span />
-</button>
+              ref={mobileToggleRef}
+              type="button"
+              className={`mobile-toggle d-lg-none ms-auto ${
+                isMobileMenuOpen ? "open" : ""
+              }`}
+              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+              aria-label="Toggle navigation"
+            >
+              <span />
+              <span />
+              <span />
+            </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-           <div
-    className="d-lg-none"
-    ref={mobileMenuRef}
-    style={{
-      position: "absolute",
-      top: "100%",
-      left: "50%",
-      transform: "translateX(-50%)",
+          <div
+            className="d-lg-none"
+            ref={mobileMenuRef}
+            style={{
+              position: "absolute",
+              top: "100%",
+              left: "50%",
+              transform: "translateX(-50%)",
 
-      width: "100%",
-      maxWidth: "520px",   // wider menu
-      padding: "20px 22px",
+              width: "100%",
+              maxWidth: "520px", // wider menu
+              padding: "20px 22px",
 
-      backgroundColor: "#ffffff",
-      border: "1px solid rgba(39,108,99,0.15)",
-      borderRadius: "1px", // low radius (minimal)
-      boxShadow: "0 12px 30px rgba(0,0,0,0.12)",
+              backgroundColor: "#ecfdf5",
+              border: "1px solid rgba(39,108,99,0.15)",
+              borderRadius: "5px", // low radius (minimal)
+              boxShadow: "0 12px 30px rgba(0,0,0,0.12)",
 
-      marginTop: "6px",
-      zIndex: 999,
-    }}
-  >
-
+              marginTop: "6px",
+              zIndex: 999,
+            }}
+          >
             <a href="/" className="d-block py-2 px-3" style={mobileLinkStyle}>
               Home
             </a>
@@ -504,7 +501,7 @@ function Navbar() {
             </a>
 
             <a
-              href="https://primewealthcare.in/"
+              href="#"
               className="btn w-100 mt-3" // 🔥 glass transparency
               target="_blank"
               rel="noreferrer"
@@ -572,6 +569,5 @@ const mobileLinkStyle = {
   borderRadius: "6px",
   textDecoration: "none",
 };
-
 
 export default Navbar;

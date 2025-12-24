@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import GCLOGO from "../IMG/Company/gc_logo.png";
-import first from "../IMG/Leaders/OptimizedLeaders/first-ezgif-removebg.png"
+import first from "../IMG/Leaders/OptimizedLeaders/first-ezgif.webp"
 import TATAAIG from "../IMG/Company/OptimizedCompany/TATAAIG.webp";
 import HDFCERGO from "../IMG/Company/OptimizedCompany/HDFCERGO.webp";
 import LICLOGO from "../IMG/Company/OptimizedCompany/LICLOGO.webp";
@@ -569,8 +569,8 @@ Person will get the accrued continuity benefits in waiting periods as per IRDAI 
       style={{
         // background: "linear-gradient(  White, #bdece6,#bdece6, white )",
          backgroundColor:"#bdece6",
-         paddingTop: "80px",   // 👈 ADD THIS
-    paddingBottom: "40px"
+         paddingTop: "80px",  
+    paddingBottom: "0px"
       }}
     >
       {/* <!-- Back to Top --> */}
@@ -580,43 +580,39 @@ Person will get the accrued continuity benefits in waiting periods as per IRDAI 
       {/* Live Search start  */}
 
       <div className="text-center mx-auto" style={{ maxWidth: 500 }}>
-        <h5 className="display-8 mt-5" style={{ color: "rgb(6, 86, 65)" }}>
+        <h5 className="display-8 " style={{ color: "rgb(6, 86, 65)" }}>
           ALREADY HAVE COVERAGE?
         </h5>
-        <h1 className="display-6 mb-5">Get to Know Your Policy</h1>
+        <h1 className="display-6">Get to Know Your Policy</h1>
       </div>
 
       <div
-        className="container-fluid header  p-0 "
+        className="container-fluid header "
         style={{ background: " #bdece6" }}
       >
-        <div className="row px-5 g-0 align-items-center flex-column-reverse flex-md-row">
-          <div className="col-md-6 animated wow fadeInUp" data-wow-delay="0.7s">
-            <img
-              className="img-fluid"
-              src={first}
-              height="100px"
-              width="900px"
-              alt
-            />
-          </div>
+        <div className="row policy-section align-items-center flex-column-reverse flex-md-row">
+  
+  <div className="col-md-6 policy-image">
+    <img
+      src={first}
+      alt="Policy Illustration"
+      className="policy-img"
+    />
+  </div>
 
-          <div className="col-md-6 p-5 mt-lg-5 text-center">
-            <h1
-              className="display-5 animated wow fadeInUp mb-4"
-              data-wow-delay="0.5s"
-            >
-              Understand the benefits of{" "}
-              <span style={{ color: "#0a3e39" }}>"Your Policy". </span>
-            </h1>
-            <p className="animated fadeIn mb-4 pb-2 text-dark">
-              {" "}
-              Explore the terms and conditions in simple, clear language.
-              Uncover the strengths, weaknesses, and missing features of your
-              insurance plan.
-            </p>
-          </div>
-        </div>
+  <div className="col-md-6 policy-content text-center text-md-start">
+    <h1 className="policy-title">
+      Understand the benefits of{" "}
+      <span>"Your Policy".</span>
+    </h1>
+    <p className="policy-text">
+      Explore the terms and conditions in simple, clear language.
+      Uncover the strengths, weaknesses, and missing features of your insurance plan.
+    </p>
+  </div>
+
+</div>
+
       </div>
 
       {/* Live Search End  */}
@@ -818,7 +814,7 @@ Person will get the accrued continuity benefits in waiting periods as per IRDAI 
           </div>
         </div>
       </div> */}
-      <div className="insurance-section">
+      {/* <div className="insurance-section">
         <h2 className="title">Our Insurance Partners</h2>
 
         <div className="marquee-container">
@@ -853,7 +849,39 @@ Person will get the accrued continuity benefits in waiting periods as per IRDAI 
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
+     <div className="insurance-section">
+  <h2 className="title">Our Insurance Partners</h2>
+
+  <div className="marquee-container">
+    {/* Row 1 - Left */}
+    <div className="marquee-row left">
+      {[GCLOGO, HDFCERGO, CARE, GCLOGO, HDFCERGO, CARE, GCLOGO, HDFCERGO].map((logo, i) => (
+        <div className="logo-card" key={`row1-${i}`}>
+          <img src={logo} alt="Insurance Partner" />
+        </div>
+      ))}
+    </div>
+
+    {/* Row 2 - Right */}
+    <div className="marquee-row right">
+      {[ICICIlombard, NIVBHUPA, TATAAIG, ICICIlombard, NIVBHUPA, TATAAIG, ICICIlombard, NIVBHUPA].map((logo, i) => (
+        <div className="logo-card" key={`row2-${i}`}>
+          <img src={logo} alt="Insurance Partner" />
+        </div>
+      ))}
+    </div>
+
+    {/* Row 3 - Left Slow */}
+    <div className="marquee-row left slow">
+      {[IFFCO, LICLOGO, IFFCO, LICLOGO, IFFCO, LICLOGO].map((logo, i) => (
+        <div className="logo-card" key={`row3-${i}`}>
+          <img src={logo} alt="Insurance Partner" />
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
 
       {/* Live WhatsApp Chat start  */}
       <div className="livechat">

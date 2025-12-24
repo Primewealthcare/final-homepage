@@ -46,81 +46,8 @@ function Home() {
         className="container-fluid p-0 mb-5 wow fadeIn"
         data-wow-delay="0.1s"
       >
-        {/* <div
-          id="header-carousel"
-          className="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img className="w-100" src={heroimg324} alt="Image" />
-              <div class="carousel-caption">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-12 col-lg-6">
-                      <h1
-                        class="display-3 text-light mb-4 animated slideInDown"
-                        style={{ textShadow: "2px 2px 4px #000000" }}
-                      >
-                        With The Right Planning, You THRIVE!
-                      </h1>
-                      <p class="fs-5 mb-5">Planning Se, Sab Mumkin Hai !</p>
-                      <a
-                        href="tel:+91 9104105104"
-                        class="btn btn-primary py-3 px-5"
-                      >
-                        More Details
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img class="w-100" src="img/carousel-2.jpg" alt="Image" />
-              <div class="carousel-caption">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-12 col-lg-6">
-                      <h1 class="display-3 text-dark mb-4 animated slideInDown">
-                        With The Right Planning, You THRIVE!
-                      </h1>
-                      <p class="fs-5 text-body mb-5">
-                        Planning Se, Sab Mumkin Hai!
-                      </p>
-                      <a
-                        href="tel:+91 9104105104"
-                        class="btn btn-primary py-3 px-5"
-                      >
-                        More Details
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#header-carousel"
-            data-bs-slide="prev"
-          >
-            <span className="carousel-control-prev-icon" aria-hidden="true" />
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#header-carousel"
-            data-bs-slide="next"
-          >
-            <span className="carousel-control-next-icon" aria-hidden="true" />
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div> */}
         <div className="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
-           <ModernCarousel heroimg324={heroimg324} />
+           <ModernCarousel/>
         </div>
       </div>
 

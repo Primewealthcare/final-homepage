@@ -14,13 +14,13 @@ function Features() {
       <a href="#" className="btn btn-lg btn-dark btn-lg-square back-to-top">
         <i className="bi bi-arrow-up"></i>
       </a>
-   
+
       {/* FEATURES SECTION */}
-      <div className="container-xxl py-5">
+      <div className="container-xxl py-0">
         <div className="container">
           <div className="row g-5 features-section">
             {/* LEFT – STICKY IMAGE */}
-            <div className="col-lg-6 features-image-col">
+            <div className="col-lg-6 features-image-col mb-3">
               <div className="features-image-wrapper">
                 <img
                   src={Feature}
@@ -62,7 +62,9 @@ function Features() {
                 {/* CARD 2 */}
                 <div className="feature-card">
                   <img src={Mail} alt="Fast service delivery" />
-                  <h5 className="text-white">Fast Response & Service Delivery</h5>
+                  <h5 className="text-white">
+                    Fast Response & Service Delivery
+                  </h5>
                   <p className="text-white">
                     Time matters when it comes to insurance. Our team ensures
                     quick responses, faster approvals and prompt service
@@ -88,7 +90,9 @@ function Features() {
                 {/* CARD 4 */}
                 <div className="feature-card">
                   <img src={Savings} alt="Money saving plans" />
-                  <h5 className="text-white">Smart Savings & Wealth Protection</h5>
+                  <h5 className="text-white">
+                    Smart Savings & Wealth Protection
+                  </h5>
                   <p className="text-white">
                     We believe in protecting your wealth while helping it grow.
                     Our optimized insurance solutions are carefully designed to
@@ -99,7 +103,10 @@ function Features() {
                 </div>
               </div>
               <div className="text-center mt-5">
-                <button className="btn btn-primary px-5 py-3">
+                <button
+                  className="btn btn-primary px-5 mb-4 py-3"
+                  onClick={() => (window.location.href = "tel:+919725655005")}
+                >
                   Get Free Consultation
                 </button>
               </div>

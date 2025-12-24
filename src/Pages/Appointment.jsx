@@ -8,27 +8,59 @@ import WhatsAppBtnn from "../IMG/WhatsAppBtnn.png";
 function Appointment() {
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  // const sendEmail = (e) => {
 
-    emailjs
-      .sendForm("service_ifxkhon", "template_d6pdy2r", form.current, {
-        publicKey: "RaoO-Lla7pQ1KXyxR",
-      })
-      .then(
-        () => {
-          toast.success("Send Message Successfully", {
-            position: "top-center",
-            autoClose: 3000,
-            theme: "light",
-          });
-          form.current.reset();
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
-  };
+  //   e.preventDefault();
+
+  //   emailjs
+  //     .sendForm("service_ifxkhon", "template_d6pdy2r", form.current, {
+  //       publicKey: "RaoO-Lla7pQ1KXyxR",
+  //     })
+  //     .then(
+  //       () => {
+  //         toast.success("Send Message Successfully", {
+  //           position: "top-center",
+  //           autoClose: 3000,
+  //           theme: "light",
+  //         });
+  //         form.current.reset();
+  //       },
+  //       (error) => {
+  //         console.log("FAILED...", error.text);
+  //       }
+  //     );
+  // };
+
+  const sendEmail = (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(form.current);
+
+  const name = formData.get("from_name");
+  const email = formData.get("from_email");
+  const mobile = formData.get("from_number");
+  const message = formData.get("message");
+
+  const whatsappMessage = `Hello, I want to book an appointment.%0A
+Name: ${name}%0A
+Email: ${email}%0A
+Mobile: ${mobile}%0A
+Message: ${message}`;
+
+  const whatsappNumber = "919725655005"; // YOUR WhatsApp number
+
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+  window.open(whatsappURL, "_blank");
+
+  toast.success("Redirecting to WhatsApp", {
+    position: "top-center",
+    autoClose: 2000,
+    theme: "light",
+  });
+
+  form.current.reset();
+};
 
   return (
     <div className="appointment-wrapper">

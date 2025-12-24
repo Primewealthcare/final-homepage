@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.f029a054.css",
-    "main.js": "/static/js/main.524f6726.js",
+    "main.js": "/static/js/main.c023baa5.js",
     "static/media/HITESHKHERADIYA.svg": "/static/media/HITESHKHERADIYA.37041bdd932419bf8cb16c6240c25700.svg",
     "static/media/WhatsAppBtnn.png": "/static/media/WhatsAppBtnn.9b8e042e515121172fb9.png",
     "static/media/PIYUSHPANDYA.svg": "/static/media/PIYUSHPANDYA.e54ec762834fe2b622cc17413cbea4ec.svg",
     "static/media/PRATIKSIR.svg": "/static/media/PRATIKSIR.b4af90acd69c74720d0fccba02da4b04.svg",
+    "static/media/first-ezgif.webp": "/static/media/first-ezgif.b251e1719b79ac572c90.webp",
     "static/media/heroimg324.png": "/static/media/heroimg324.3714a955cb04ddb5a571.png",
     "static/media/BHARATSINH.svg": "/static/media/BHARATSINH.ac97ceef1d15273018d1fbfadb8a7fd7.svg",
     "static/media/Mail.gif": "/static/media/Mail.7363c88311df5ba09d08.gif",
@@ -29,6 +30,7 @@
     "static/media/MITSUMAM-ezgif-removebg.png": "/static/media/MITSUMAM-ezgif-removebg.7c4789855b23be99222e.png",
     "static/media/Process-ezgif.webp": "/static/media/Process-ezgif.a3348a34f2f9eb4dd5d3.webp",
     "static/media/Workman-ezgif.webp": "/static/media/Workman-ezgif.d20fe6d912e569762b1e.webp",
+    "static/media/GeminiHero1.webp": "/static/media/GeminiHero1.29ee847f346bbc632899.webp",
     "static/media/MEHUL-ezgif-removebg.png": "/static/media/MEHUL-ezgif-removebg.3d540d3b5d074011beb5.png",
     "static/media/PIYUSHPANDYA-ezgif-removebg.png": "/static/media/PIYUSHPANDYA-ezgif-removebg.be95bb7d3c4bd8f87fa5.png",
     "static/media/instagram.png": "/static/media/instagram.e1c30ecbe2c86494c93b.png",
@@ -39,14 +41,12 @@
     "static/media/logo-ezgif-removebg.png": "/static/media/logo-ezgif-removebg.df6920e9ff02c0efa45b.png",
     "static/media/facebook.png": "/static/media/facebook.595de4ee5e769d7e2d1a.png",
     "static/media/Medical-ezgif.webp": "/static/media/Medical-ezgif.5905c03b15c854279cc6.webp",
-    "static/media/carousel-1.webp": "/static/media/carousel-1.673de7603de4d04ea2c9.webp",
     "static/media/linkedin.png": "/static/media/linkedin.9ca3295c91fc262fc019.png",
     "static/media/calling.png": "/static/media/calling.bf59f675756ab980d177.png",
     "static/media/FeatureOptimized.webp": "/static/media/FeatureOptimized.1dfc4bfe8bd37c45d3ce.webp",
-    "static/media/first-ezgif-removebg.png": "/static/media/first-ezgif-removebg.bcf478c52f2b6af8640f.png",
-    "static/media/carousel-2.webp": "/static/media/carousel-2.8b37431b16af1d16631d.webp",
     "static/media/Mail.png": "/static/media/Mail.ddf047ff815748e03deb.png",
-    "static/media/carousal3.webp": "/static/media/carousal3.2b121cc5617dd62f27c0.webp",
+    "static/media/GeminiHero3.webp": "/static/media/GeminiHero3.b1f61450ed07e9a03814.webp",
+    "static/media/GeminiHero4.webp": "/static/media/GeminiHero4.26eced6acdf55384ebd6.webp",
     "static/media/LICLOGO.webp": "/static/media/LICLOGO.c3bfafc64b3cac152633.webp",
     "static/media/IFFCO.webp": "/static/media/IFFCO.c912dc9e7b41bfbd253e.webp",
     "static/media/CARE.webp": "/static/media/CARE.be3a63b0b40c1f002d8f.webp",
@@ -55,10 +55,10 @@
     "static/media/HDFCERGO.webp": "/static/media/HDFCERGO.7a7b1c377c23f060ff50.webp",
     "index.html": "/index.html",
     "main.f029a054.css.map": "/static/css/main.f029a054.css.map",
-    "main.524f6726.js.map": "/static/js/main.524f6726.js.map"
+    "main.c023baa5.js.map": "/static/js/main.c023baa5.js.map"
   },
   "entrypoints": [
     "static/css/main.f029a054.css",
-    "static/js/main.524f6726.js"
+    "static/js/main.c023baa5.js"
   ]
 }

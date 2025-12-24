@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import carousal4 from "../IMG/GeminiHero1.png";
-import carousal6 from "../IMG/GeminiHero3.png";
-import carousal7 from "../IMG/GeminiHero4.png";
+import carousal4 from "../IMG/GeminiHero1.webp";
+import carousal6 from "../IMG/GeminiHero3.webp";
+import carousal7 from "../IMG/GeminiHero4.webp";
 
 
 
@@ -13,7 +13,7 @@ const ModernCarousel = () => {
   const slides = [
     
     {
-      image: carousal6,
+      image: carousal4,
       title: "Safeguarding What Matters Most",
       subtitle: "Aaj ki planning, kal ka protection",
       theme: "light",
@@ -25,7 +25,7 @@ const ModernCarousel = () => {
       theme: "light",
     },
     {
-      image: carousal4,
+      image: carousal6,
       title: "Strong Foundations. Secure Futures.",
       subtitle: "Planning jo aapke saath chale",
       theme: "light",

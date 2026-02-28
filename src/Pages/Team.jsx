@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BHARATSINH from "../IMG/Leaders/BHARATSINH.svg"
 import MEHUL from "../IMG/Leaders/MEHUL.svg"
 import HITESHKHERADIYA from "../IMG/Leaders/HITESHKHERADIYA.svg"
@@ -11,6 +11,7 @@ import PIYUSHPANDYA from "../IMG/Leaders/PIYUSHPANDYA.svg"
 import WhatsAppBtnn from ".///../IMG/WhatsAppBtnn.png"
 
 function Team() {
+
   return (
     <div style={{background: "#dcfcf4 "}} >
       {/* <!-- Back to Top --> */}
@@ -409,7 +410,8 @@ function Team() {
     <div className="livechat">
         <a 
           aria-label="Chat on WhatsApp" 
-          href="https://wa.me/919104105104?text= hello, I have a question "   
+                                                                                                                                                                                                                                                                                                                href="https://wa.me/919725655005?text= hello, I have a question "   
+
           target="_blank"
           rel="noopener noreferrer"
         >

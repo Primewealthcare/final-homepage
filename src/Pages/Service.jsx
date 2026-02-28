@@ -1,12 +1,12 @@
 import React from "react";
-import Workman from "../IMG/Animatedicon/Workman.gif";
-import CarAccident from "../IMG/Animatedicon/CarAccident.gif";
-import LifeInsiurance from "../IMG/Animatedicon/LifeInsiurance.gif";
-import Medical from "../IMG/Animatedicon/Medical.gif";
-import CarInsurance from "../IMG/Animatedicon/CarInsurance.gif";
-import Moneytransit from "../IMG/Animatedicon/Moneytransit.gif";
-import FireInsurance from "../IMG/Animatedicon/FireInsurance.gif";
-import Home from "../IMG/Animatedicon/Home.gif"
+import Workman from "../IMG/Animatedicon/OptimizedGifs/Workman-ezgif.webp";
+import CarAccident from "../IMG/Animatedicon/OptimizedGifs/CarAccident-ezgif.webp";
+import LifeInsiurance from "../IMG/Animatedicon/OptimizedGifs/Home-ezgif.webp";
+import Medical from "../IMG/Animatedicon/OptimizedGifs/Medical-ezgif.webp";
+import CarInsurance from "../IMG/Animatedicon/OptimizedGifs/CarInsurance-ezgif.webp";
+import Moneytransit from "../IMG/Animatedicon/OptimizedGifs/Moneytransit-ezgif.webp";
+import FireInsurance from "../IMG/Animatedicon/OptimizedGifs/FireInsurance-ezgif.webp";
+import Home from "../IMG/Animatedicon/OptimizedGifs/Home-ezgif.webp";
 
 import WhatsAppBtnn from ".///../IMG/WhatsAppBtnn.png"
 
@@ -21,7 +21,7 @@ function Service() {
         <div className="container">
           <div className="text-center mx-auto" style={{ maxWidth: 500 }}>
             <h1 className="display-6 mb-5 text-light" style={{textShadow: "2px 2px 4px #000000"}}>
-              We Provide professional Insurance Services
+Professional Insurance Services You Can Trust
             </h1>
           </div>
           <div className="row g-4 justify-content-center">
@@ -44,7 +44,7 @@ function Service() {
                   </div>
                   <h4 className="mb-0">Life Insurance</h4>
                 </div>
-                <p classname="mb-4">
+                <p className="mb-4">
                   We Offer A Plethora Of Life Insurance Policies Through The
                   Channel Of LIFE CORPORATION OF INDIA (L.I.C).
                 </p>
@@ -167,9 +167,7 @@ function Service() {
                   <h4 className="mb-0">Money In Transit Insurance</h4>
                 </div>
                 <p classname="mb-4">
-                  Provides Coverage Against Loss Of Cash Or Currency Whilst In
-                  Transit As Well As In Your Premises Due To Accident Or
-                  Misfortune.
+                  Financial Coverage Against Unforseen Events Suggest Accident Causing Vehicles Damages.
                 </p>
                 <div className="text-center">
                   <a className="btn btn-light px-3" href="tel:+91 9104105104">
@@ -278,7 +276,7 @@ function Service() {
         <div className="livechat">
         <a 
           aria-label="Chat on WhatsApp" 
-          href="https://wa.me/919104105104?text= hello, I have a question "   
+          href="https://wa.me/919725655005?text= hello, I have a question "   
           target="_blank"
           rel="noopener noreferrer"
         >

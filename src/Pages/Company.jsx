@@ -1,21 +1,18 @@
 import React, { useEffect, useState } from "react";
-import FG from "../IMG/Company/FG.svg"
-import first from "../IMG/Company/first.gif"
-import TATAAIG from "../IMG/Company/TATAAIG.svg"
-import HDFCERGO from "../IMG/Company/HDFCERGO.svg"
-import LICLOGO from "../IMG/Company/LICLOGO.svg"
-import CARE from "../IMG/Company/CARE.svg"
-import ICICIlombard from "../IMG/Company/ICICIlombard.svg"
-import IFFCO from "../IMG/Company/IFFCO.svg"
-import NIVBHUPA from "../IMG/Company/NIVBHUPA.svg"
+import GCLOGO from "../IMG/Company/gc_logo.png";
+import first from "../IMG/Leaders/OptimizedLeaders/first-ezgif.webp"
+import TATAAIG from "../IMG/Company/OptimizedCompany/TATAAIG.webp";
+import HDFCERGO from "../IMG/Company/OptimizedCompany/HDFCERGO.webp";
+import LICLOGO from "../IMG/Company/OptimizedCompany/LICLOGO.webp";
+import CARE from "../IMG/Company/OptimizedCompany/CARE.webp";
+import ICICIlombard from "../IMG/Company/OptimizedCompany/ICICIlombard.png";
+import IFFCO from "../IMG/Company/OptimizedCompany/IFFCO.webp";
+import NIVBHUPA from "../IMG/Company/OptimizedCompany/NIVBHUPA.webp";
 
-
-import WhatsAppBtnn from ".///../IMG/WhatsAppBtnn.png"
+import WhatsAppBtnn from ".///../IMG/WhatsAppBtnn.png";
 
 function Company() {
-
   const countries = [
-
     // fg Start
     {
       name: "FUTURE GENRALI INDIA INSURANCE CO. LTD.",
@@ -37,7 +34,11 @@ to this Policy.`,
 by the Insured Person during the Policy Period following an Illness or Injury that occurs during the Policy Period,
 subject always to the availability of the Sum Insured and any specific limits specified in the Schedule of Benefits and
 the terms, conditions and exclusions specified in this Policy document.`,
-                subProducts: ["Cashless Treatment", "No Claim Bonus", "Tax Benefits"],
+                subProducts: [
+                  "Cashless Treatment",
+                  "No Claim Bonus",
+                  "Tax Benefits",
+                ],
                 heading: "FG HEALTH TOTAL",
                 policyWordingUrl: "/pdfs/Future/healthtotalwordings.pdf", // Replace with the actual URL
                 brochureUrl: "/pdfs/Future/healthtotalbrochure.pdf", // Replace with the actual URL
@@ -56,7 +57,8 @@ Insured Person following an Illness or Injury that occurs during the Policy Peri
 any sub-limits specified in the Schedule of Benefits and the terms, conditions and exclusions specified in this Policy document`,
                 subProducts: ["Affordable Premium", "Wide Network"],
                 heading: "FG HEALTH ABSOLUTE",
-                policyWordingUrl: "/pdfs/Future/fghealthabsolutepolicywordings.pdf", // Replace with the actual URL
+                policyWordingUrl:
+                  "/pdfs/Future/fghealthabsolutepolicywordings.pdf", // Replace with the actual URL
                 brochureUrl: "/pdfs/Future/fghealthabsolutebrochure.pdf", // Replace with the actual URL
               },
             },
@@ -74,7 +76,8 @@ up to a maximum of 10 days per Hospitalization subject to maximum of 30 days dur
 Hospitalization sum insured.`,
                 subProducts: ["Affordable Premium", "Wide Network"],
                 heading: "FG HEALTH SURAKSHA",
-                policyWordingUrl: "/pdfs/Future/healthsurakshapolicywordings.pdf", // Replace with the actual URL
+                policyWordingUrl:
+                  "/pdfs/Future/healthsurakshapolicywordings.pdf", // Replace with the actual URL
                 brochureUrl: "/pdfs/Future/healthsurakshabrochure.pdf", // Replace with the actual URL
               },
             },
@@ -95,7 +98,8 @@ under any health insurance policy with an lndian General/Health insurer, the pro
 benefits in waiting periods as per IRDAI guidelines on portability. `,
                 subProducts: ["Affordable Premium", "Wide Network"],
                 heading: "FG ADVANTAGE TOP UP",
-                policyWordingUrl: "/pdfs/Future/futureadvantagetopuppolicywordings.pdf", // Replace with the actual URL
+                policyWordingUrl:
+                  "/pdfs/Future/futureadvantagetopuppolicywordings.pdf", // Replace with the actual URL
                 brochureUrl: "/pdfs/Future/futureadvantagetopupbrochure.pdf", // Replace with the actual URL
               },
             },
@@ -108,14 +112,15 @@ of the premium on behalf of you and the persons to be insured. This Policy recor
 sets out the terms of insurance and the obligations of each party. Now this contract witnesses to the definitions terms, conditions and exclusions
 contained herein, or endorsed or otherwise expressed hereon and sets out as stated in Schedule of this policy/contract to the said Insured Person/s
 claiming payment or upon the happening of an event upon which one or more benefits become payable under the sum insured as stated in the Schedule.`,
-                benefits:`The insured person will have the option to port the policy to other insurers by applying to such insurer to port the entire policy along with all the
+                benefits: `The insured person will have the option to port the policy to other insurers by applying to such insurer to port the entire policy along with all the
 members of the family, if any, at least 45 days before, but not earlier than 60 days from the policy renewal date as per IRDAI guidelines related
 to portability. lf such person is presently covered and has been continuously covered without any lapses under any health insurance policy with
 an lndian General/ Health insurer, the proposed insured person will get the accrued continuity benefits in waiting periods as per IRDAI
 guidelines on portability.`,
                 subProducts: ["Affordable Premium", "Wide Network"],
                 heading: "FG VARISHTHA BIMA",
-                policyWordingUrl: "/pdfs/Future/futurevarishtabimapolicywordings.pdf", // Replace with the actual URL
+                policyWordingUrl:
+                  "/pdfs/Future/futurevarishtabimapolicywordings.pdf", // Replace with the actual URL
                 brochureUrl: "/pdfs/Future/futurevaristhabimabrochure.pdf", // Replace with the actual URL
               },
             },
@@ -130,13 +135,18 @@ guidelines on portability.`,
                 youtubeLink: "https://www.youtube.com/embed/example1",
                 description: `This Policy is issued to You based on the Disclosure to information norm, Your Proposal to Us and Your payment of the Premium. This 
 Policy records the agreement between Us and You and sets out the terms of insurance and the obligations of each party. `,
-                benefits:`he insured person will have the option to migrate the policy to other health insurance products/plans offered by the company by applying for 
+                benefits: `he insured person will have the option to migrate the policy to other health insurance products/plans offered by the company by applying for 
 migration of the policy at least 30 days before the policy renewal date as per IRDAI guidelines on Migration. lf such person is presently covered 
 and has been continuously covered without any lapses under any health insurance product/plan offered by the company, the insured person will 
 get all the accrued continuity benefits in waiting periods as per the IRDAI guidelines on migration.  `,
-                subProducts: ["Cashless Treatment", "No Claim Bonus", "Tax Benefits"],
+                subProducts: [
+                  "Cashless Treatment",
+                  "No Claim Bonus",
+                  "Tax Benefits",
+                ],
                 heading: "FG ACCIDENT SURAKSHA",
-                policyWordingUrl: "/pdfs/Future/accidentsurakshapolicywordings.pdf", // Replace with the actual URL
+                policyWordingUrl:
+                  "/pdfs/Future/accidentsurakshapolicywordings.pdf", // Replace with the actual URL
                 brochureUrl: "/pdfs/Future/accidentsurakshabrochure.pdf", // Replace with the actual URL
               },
             },
@@ -151,12 +161,18 @@ get all the accrued continuity benefits in waiting periods as per the IRDAI guid
                 youtubeLink: "https://www.youtube.com/embed/example1",
                 description: `This Policy is issued to you based on your Proposal to us and payment of the Premium. You are eligible to be covered under this policy if your age is
 between 6 months to 80 years. This Policy records the agreement between us and you, and sets out the terms of insurance and obligations of each
-party.`,        
+party.`,
                 benefits: ` Cashless Claim Settlement, Claims turnaround time of fourteen working days, Worldwide Emergency, Medical and Travel Assistance Services, Ease and convenience of purchase, Child escort benefit, Cover extension in india, up to 90 days for medical expenses on evacuation, Reimbursement of claims as per policy terms and conditions, Worldwide Service Provider, Flaxibility of choosing a Travel Insurance Plan as per your need, Instant Policy issuance, Specially designed plan for senior citizens (i.e. 71 - 80 years of age)  `,
-                subProducts: ["Cashless Treatment", "No Claim Bonus", "Tax Benefits"],
+                subProducts: [
+                  "Cashless Treatment",
+                  "No Claim Bonus",
+                  "Tax Benefits",
+                ],
                 heading: "FG HEALTH TOTAL",
-                policyWordingUrl: "/pdfs/Future/futuretravelsurakshapolicywordings.pdf", // Replace with the actual URL
-                brochureUrl: "/pdfs/Future/futuretravelsurakshaworldwideebrochure.pdf", // Replace with the actual URL
+                policyWordingUrl:
+                  "/pdfs/Future/futuretravelsurakshapolicywordings.pdf", // Replace with the actual URL
+                brochureUrl:
+                  "/pdfs/Future/futuretravelsurakshaworldwideebrochure.pdf", // Replace with the actual URL
               },
             },
           ],
@@ -176,8 +192,12 @@ party.`,
               details: {
                 youtubeLink: "https://www.youtube.com/embed/example1",
                 description: `The proposal and declaration given by the proposer and other documents if any shall form the basis of this Contract and is deemed to be incorporated herein. The two parties to this contract are the Policy Holder/Insured/Insured Persons (also referred as You) and Care Health Insurance Limited (also referred as Company/ We/Us), and all the Provisions of Indian Contract Act, 1872, shall hold good in this regard. The references to the singular include references to the plural; references to the male include the references to the female; and references to any statutory enactment include subsequent changes to the same and vice versa. The sentence construction and wordings in the Policy documents should be taken in its true sense and should not be taken in a way so as to take advantage of the Company by filing a claim which deviates from the purpose of Insurance.`,
-                 benefits:`The Insured Person will have the option to migrate the policy to other health insurance products/plans offered by the Company by applying for migration of the policy at least 30 days before the policy renewal date as per IRDAI guidelines on Migration. If such person is presently covered and has been continuously covered without any lapses under any health insurance product/plan offered by the Company, the Insured Person will get the accrued continuity benefits as per IRDAI guidelines on migration`,
-                subProducts: ["Cashless Treatment", "No Claim Bonus", "Tax Benefits"],
+                benefits: `The Insured Person will have the option to migrate the policy to other health insurance products/plans offered by the Company by applying for migration of the policy at least 30 days before the policy renewal date as per IRDAI guidelines on Migration. If such person is presently covered and has been continuously covered without any lapses under any health insurance product/plan offered by the Company, the Insured Person will get the accrued continuity benefits as per IRDAI guidelines on migration`,
+                subProducts: [
+                  "Cashless Treatment",
+                  "No Claim Bonus",
+                  "Tax Benefits",
+                ],
                 heading: "CARE SUPREME",
                 policyWordingUrl: "/pdfs/Care/CareSupremePolicywording.pdf", // Replace with the actual URL
                 brochureUrl: "/pdfs/Care/CareSupremeBrochure.pdf", // Replace with the actual URL
@@ -189,7 +209,11 @@ party.`,
                 youtubeLink: "https://www.youtube.com/embed/example1",
                 description: `The proposal and declaration given by the proposer and other documents if any shall form the basis of this Contract and is deemed to be incorporated herein. The two parties to this contract are the Policy Holder/Insured/Insured Persons (also referred as You) and Care Health Insurance Limited (also referred as Company/ We/Us), and all the Provisions of Indian Contract Act, 1872, shall hold good in this regard. The references to the singular include references to the plural; references to the male include the references to the female; and references to any statutory enactment include subsequent changes to the same and vice versa. The sentence construction and wordings in the Policy documents should be taken in its true sense and should not be taken in a way so as to take advantage of the Company by filing a claim which deviates from the purpose of Insurance.`,
                 benefits: `The insured person will have the option to port the policy to other insurers by applying to such insurer to port the entire policy along with all the members of the family, if any, at least 30 days before, but not earlier than 60 days from the policy renewal date as per IRDAI guidelines related to portability. If such person is presently covered and has been continuously covered without any lapses under any health insurance policy with an indian General/Health insurer, the proposed insured person will get the accrued continuity benefits as per IRDAI guidelines on portability.`,
-                subProducts: ["Cashless Treatment", "No Claim Bonus", "Tax Benefits"],
+                subProducts: [
+                  "Cashless Treatment",
+                  "No Claim Bonus",
+                  "Tax Benefits",
+                ],
                 heading: "CARE ADVANTAGE",
                 policyWordingUrl: "/pdfs/Care/CareAdvantagePolicywording.pdf", // Replace with the actual URL
                 brochureUrl: "/pdfs/Care/CareAdvantageBrochure.pdf", // Replace with the actual URL
@@ -210,7 +234,11 @@ without any lapses under any health insurance
 product/plan offered by the company, the insured
 person will get the accrued continuity benefits as per
 IRDAI guidelines on migration`,
-                subProducts: ["Cashless Treatment", "No Claim Bonus", "Tax Benefits"],
+                subProducts: [
+                  "Cashless Treatment",
+                  "No Claim Bonus",
+                  "Tax Benefits",
+                ],
                 heading: "CARE FREEDOM",
                 policyWordingUrl: "/pdfs/Care/CareFreedomPolicywording.pdf", // Replace with the actual URL
                 brochureUrl: "/pdfs/Care/CareFreedomBrochure.pdf", // Replace with the actual URL
@@ -220,8 +248,8 @@ IRDAI guidelines on migration`,
               name: "CARE",
               details: {
                 youtubeLink: "https://www.youtube.com/embed/example1",
-                description:`The proposal and declaration given by the proposer and other documents if any shall form the basis of this Contract and is deemed to be incorporated herein. The two parties to this contract are the Policy Holder/Insured/Insured Persons (also referred as You) and Care Health Insurance Limited (also referred as Company/ We/Us), and all the Provisions of Indian Contract Act, 1872, shall hold good in this regard. The references to the singular include references to the plural; references to the male include the references to the female; and references to any statutory enactment include subsequent changes to the same and vice versa. The sentence construction and wordings in the Policy documents should be taken in its true sense and should not be taken in a way so as to take advantage of the Company by filing a claim which deviates from the purpose of Insurance.`,
-                benefits:`Any Claim paid for Benefits namely Benefit 1
+                description: `The proposal and declaration given by the proposer and other documents if any shall form the basis of this Contract and is deemed to be incorporated herein. The two parties to this contract are the Policy Holder/Insured/Insured Persons (also referred as You) and Care Health Insurance Limited (also referred as Company/ We/Us), and all the Provisions of Indian Contract Act, 1872, shall hold good in this regard. The references to the singular include references to the plural; references to the male include the references to the female; and references to any statutory enactment include subsequent changes to the same and vice versa. The sentence construction and wordings in the Policy documents should be taken in its true sense and should not be taken in a way so as to take advantage of the Company by filing a claim which deviates from the purpose of Insurance.`,
+                benefits: `Any Claim paid for Benefits namely Benefit 1
 (Hospitalization Expenses), Benefit 2 (Pre
 Hospitalization Medical Expenses and Post
 Hospitalization Medical Expenses), Benefit 3
@@ -240,7 +268,11 @@ Ambulance Cover), shall reduce the Total Sum
 Insured for the Policy Year and only the balance
 shall be available for all the future claims for that
 Policy Year.`,
-                subProducts: ["Cashless Treatment", "No Claim Bonus", "Tax Benefits"],
+                subProducts: [
+                  "Cashless Treatment",
+                  "No Claim Bonus",
+                  "Tax Benefits",
+                ],
                 heading: "CARE",
                 policyWordingUrl: "/pdfs/Care/CarePolicywording.pdf", // Replace with the actual URL
                 brochureUrl: "/pdfs/Care/CareBrochure.pdf", // Replace with the actual URL
@@ -262,7 +294,11 @@ Policy Year.`,
  General/Health insurer, the proposed insured person will 
  get the accrued continuity benefits in waiting periods as 
  per IRDAI guidelines on portability.`,
-                subProducts: ["Cashless Treatment", "No Claim Bonus", "Tax Benefits"],
+                subProducts: [
+                  "Cashless Treatment",
+                  "No Claim Bonus",
+                  "Tax Benefits",
+                ],
                 heading: "CARE PLUS YOUTH PLAN",
                 policyWordingUrl: "/pdfs/Care/CarePlusPolicywording.pdf", // Replace with the actual URL
                 brochureUrl: "/pdfs/Care/CarePlusYouthBrochure.pdf", // Replace with the actual URL
@@ -273,7 +309,7 @@ Policy Year.`,
               details: {
                 youtubeLink: "https://www.youtube.com/embed/example1",
                 description: `The proposal and declaration given by the proposer and other documents if any shall form the basis of this Contract and is deemed to be incorporated herein. The two parties to this contract are the Policy Holder/Insured/Insured Persons (also referred as You) and Care Health Insurance Limited (also referred as Company/ We/Us), and all the Provisions of Indian Contract Act, 1872, shall hold good in this regard. The references to the singular include references to the plural; references to the male include the references to the female; and references to any statutory enactment include subsequent changes to the same and vice versa. The sentence construction and wordings in the Policy documents should be taken in its true sense and should not be taken in a way so as to take advantage of the Company by filing a claim which deviates from the purpose of Insurance.`,
-                benefits:`he insured person will have the option to port the policy 
+                benefits: `he insured person will have the option to port the policy 
  to other insurers by applying to such insurer to port the 
  entire policy along with all the members of the family, if 
  any, at least 30 days before, but not earlier than 60 days 
@@ -284,7 +320,11 @@ Policy Year.`,
  General/Health insurer, the proposed insured person will 
  get the accrued continuity benefits in waiting periods as 
  per IRDAI guidelines on portability.`,
-                subProducts: ["Cashless Treatment", "No Claim Bonus", "Tax Benefits"],
+                subProducts: [
+                  "Cashless Treatment",
+                  "No Claim Bonus",
+                  "Tax Benefits",
+                ],
                 heading: "CARE PLUS COMPLETE PLAN",
                 policyWordingUrl: "/pdfs/Care/CarePlusPolicywording.pdf", // Replace with the actual URL
                 brochureUrl: "/pdfs/Care/CarePlusCompleteBrochure.pdf", // Replace with the actual URL
@@ -292,10 +332,9 @@ Policy Year.`,
             },
           ],
         },
-        
       ],
     },
-    // HDFC Ergo Start 
+    // HDFC Ergo Start
     {
       name: "HDFC ERGO GENERAL INSURANCE COMPANY LIMITED",
       states: [
@@ -305,7 +344,8 @@ Policy Year.`,
             {
               name: "OPTIMA RESTORE",
               details: {
-                youtubeLink: "https://www.youtube.com/embed/vXcEL9r3Roo?si=sKtpXCbs4FlgycJk&autoplay=1&mute=1&loop=1&playlist=vXcEL9r3Roo",
+                youtubeLink:
+                  "https://www.youtube.com/embed/vXcEL9r3Roo?si=sKtpXCbs4FlgycJk&autoplay=1&mute=1&loop=1&playlist=vXcEL9r3Roo",
                 description: `This Policy is a contract of insurance issued by HDFC ERGO 
 General Insurance Company Limited (hereinafter called 
 the ‘Company’) to the proposer mentioned in the Policy 
@@ -323,10 +363,15 @@ guidelines related to Portability. If such person is presently covered and has b
 continuously covered without any lapses under any health insurance policy with an Indian 
 General/Health insurer, the proposed Insured Person will get the accrued continuity 
 benefits in waiting periods as per IRDAI guidelines on portability. `,
-                subProducts: ["Cashless Treatment", "No Claim Bonus", "Tax Benefits"],
+                subProducts: [
+                  "Cashless Treatment",
+                  "No Claim Bonus",
+                  "Tax Benefits",
+                ],
                 heading: "OPTIMA RESTORE",
-                policyWordingUrl: "/pdfs/HDFC/Optima+Restore-Policy+Wording.pdf", 
-                brochureUrl: "/pdfs/HDFC/Optima+Restore-Brochure.pdf", 
+                policyWordingUrl:
+                  "/pdfs/HDFC/Optima+Restore-Policy+Wording.pdf",
+                brochureUrl: "/pdfs/HDFC/Optima+Restore-Brochure.pdf",
               },
             },
             {
@@ -354,7 +399,11 @@ without any lapses under any health insurance policy
 with an Indian General/Health insurer, the proposed 
 Insured Person will get the accrued continuity benefits 
 in waiting periods as per IRDAI guidelines on portability.`,
-                subProducts: ["Cashless Treatment", "No Claim Bonus", "Tax Benefits"],
+                subProducts: [
+                  "Cashless Treatment",
+                  "No Claim Bonus",
+                  "Tax Benefits",
+                ],
                 heading: "OPTIMA SECURE",
                 policyWordingUrl: "/pdfs/HDFC/OptimaSecurePolicywording.pdf", // Replace with the actual URL
                 brochureUrl: "/pdfs/HDFC/OptimaSecureBrochure.pdf", // Replace with the actual URL
@@ -381,9 +430,14 @@ covered without any lapses under any health insurance policy
 with an Indian General/Health insurer, the proposed Insured 
 Person will get the accrued continuity benefits in waiting 
 periods as per IRDAI guidelines on portability.`,
-                subProducts: ["Cashless Treatment", "No Claim Bonus", "Tax Benefits"],
+                subProducts: [
+                  "Cashless Treatment",
+                  "No Claim Bonus",
+                  "Tax Benefits",
+                ],
                 heading: "MY HEALTH SURAKSHA GOLD",
-                policyWordingUrl: "/pdfs/HDFC/myHealthSurakshaPolicywording.pdf", // Replace with the actual URL
+                policyWordingUrl:
+                  "/pdfs/HDFC/myHealthSurakshaPolicywording.pdf", // Replace with the actual URL
                 brochureUrl: "/pdfs/HDFC/myHealthSurakshaBrochure.pdf", // Replace with the actual URL
               },
             },
@@ -395,14 +449,18 @@ periods as per IRDAI guidelines on portability.`,
 Impaired Glucose Tolerance (IGT), Type 1 diabetes and/or Hypertension. The insurance cover is subject 
 to the terms, conditions and exclusions of this Policy, your payment of premium and realization 
 thereof by us and your statements in the proposal form which is the basis of this Policy.`,
-                benefits:   `The insured person will have the option to port the policy to other insurers by applying to such 
+                benefits: `The insured person will have the option to port the policy to other insurers by applying to such 
 insurer to port the entire policy along with all the members of the family, if any, at least 45 days 
 before, but not earlier than 60 days from the policy renewal date as per IRDAI guidelines related 
 to portability. If such person is presently covered and has been continuously covered without any 
 lapses under any health insurance policy with an Indian General/Health insurer, the proposed 
 insured person will get the accrued continuity benefits in waiting periods as per IRDAI guidelines 
 on portability. `,
-                subProducts: ["Cashless Treatment", "No Claim Bonus", "Tax Benefits"],
+                subProducts: [
+                  "Cashless Treatment",
+                  "No Claim Bonus",
+                  "Tax Benefits",
+                ],
                 heading: "ENERGY",
                 policyWordingUrl: "/pdfs/HDFC/EnergyPolicywording.pdf", // Replace with the actual URL
                 brochureUrl: "/pdfs/HDFC/EnergyBrochure.pdf", // Replace with the actual URL
@@ -420,16 +478,21 @@ inpatient, We will reimburse the amount of such Medical Expenses as per the bene
 Section C – Scope of Covers, in excess of Aggregate Deductible and subject to a maximum of the Sum 
 Insured as stated in the Schedule. The liability of the Company to pay the admissible Claim under that 
 Policy Year will commence only once Aggregate Deductible has been exhausted. `,
-                benefits:`The Insured Person will have the option to port the Policy to other insurers by applying to such 
+                benefits: `The Insured Person will have the option to port the Policy to other insurers by applying to such 
 Insurer to port the entire policy along with all the members of the family, if any, at least 45 days 
 before, but not earlier than 60 days from the policy renewal date as per IRDAI guidelines related to 
 Portability. If such person is presently covered and has been continuously covered without any 
 lapses under any health insurance policy with an Indian General/Health insurer, the proposed 
 Insured Person will get the accrued continuity benefits in waiting periods as per IRDAI guidelines 
 on portability. `,
-                subProducts: ["Cashless Treatment", "No Claim Bonus", "Tax Benefits"],
+                subProducts: [
+                  "Cashless Treatment",
+                  "No Claim Bonus",
+                  "Tax Benefits",
+                ],
                 heading: "MEDISURE SUPER TOPUP",
-                policyWordingUrl: "/pdfs/HDFC/myHealthMedisurTopupPolicywording.pdf", // Replace with the actual URL
+                policyWordingUrl:
+                  "/pdfs/HDFC/myHealthMedisurTopupPolicywording.pdf", // Replace with the actual URL
                 brochureUrl: "/pdfs/HDFC/myHealthMedisureTopupBrochure.pdf", // Replace with the actual URL
               },
             },
@@ -446,14 +509,19 @@ on portability. `,
 applicable and subject to waiting periods, limits, Procedure sub-limits, Co-payment,Deductible, Aggregate Deductible as specified 
 on the Schedule of Coverage in the Policy Schedule.The Policy is based on  statements, disclosures, declarations made in the Proposal 
 form andMedical reports. `,
-                benefits :`The Insured Person will have the option to port the Policy to other insurers by applying to such Insurer to port the entire 
+                benefits: `The Insured Person will have the option to port the Policy to other insurers by applying to such Insurer to port the entire 
 policy along with all the members of the family, if any, at least 45 days before, but not earlier than 60 days from the policy 
 renewal date as per IRDAI guidelines related to Portability. If such person is presently covered and has been continuously 
 covered without any lapses under any health insurance policy with an Indian General/Health insurer, the proposed Insured 
 Person will get the accrued continuity benefits in waiting periods as per IRDAI guidelines on portability. `,
-                subProducts: ["Cashless Treatment", "No Claim Bonus", "Tax Benefits"],
+                subProducts: [
+                  "Cashless Treatment",
+                  "No Claim Bonus",
+                  "Tax Benefits",
+                ],
                 heading: "MY HEALTH KOTY SURAKSHA",
-                policyWordingUrl: "/pdfs/HDFC/myHealthKotiSurakshaPolicywording.pdf", // Replace with the actual URL
+                policyWordingUrl:
+                  "/pdfs/HDFC/myHealthKotiSurakshaPolicywording.pdf", // Replace with the actual URL
                 brochureUrl: "/pdfs/HDFC/myHealthKotiSurakshaBrochure.pdf", // Replace with the actual URL
               },
             },
@@ -461,12 +529,7 @@ Person will get the accrued continuity benefits in waiting periods as per IRDAI 
         },
       ],
     },
-   
   ];
- 
-
-
-
 
   const [country, setCountry] = useState("---Country---");
   const [state, setState] = useState("---state---");
@@ -475,18 +538,17 @@ Person will get the accrued continuity benefits in waiting periods as per IRDAI 
   const [cities, setCities] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-
-
   const changeCountry = (event) => {
     setCountry(event.target.value);
-    const selectedCountry = countries.find((ctr) => ctr.name === event.target.value);
+    const selectedCountry = countries.find(
+      (ctr) => ctr.name === event.target.value
+    );
     setStates(selectedCountry?.states || []);
     setState("---state---");
     setCities([]);
     setCity("---city---");
     setSelectedProduct(null);
   };
-
 
   const changeState = (event) => {
     setState(event.target.value);
@@ -502,194 +564,59 @@ Person will get the accrued continuity benefits in waiting periods as per IRDAI 
     setSelectedProduct(selectedCity?.details || null);
   };
 
-
-
-
   return (
-    <div style={{ background:"linear-gradient(  White, #bdece6,#bdece6, white )" ,
-    //  backgroundColor:"#bdece6"
-    }}
-     >
+    <div
+      style={{
+        // background: "linear-gradient(  White, #bdece6,#bdece6, white )",
+         backgroundColor:"#bdece6",
+         paddingTop: "80px",  
+    paddingBottom: "0px"
+      }}
+    >
       {/* <!-- Back to Top --> */}
-    <a href="#" class="btn btn-lg btn-dark btn-lg-square back-to-top">
+      <a href="#" class="btn btn-lg btn-dark btn-lg-square back-to-top">
         <i class="bi bi-arrow-up"></i>
-        </a>
+      </a>
       {/* Live Search start  */}
 
       <div className="text-center mx-auto" style={{ maxWidth: 500 }}>
-        <h5 className="display-8 mt-5" style={{ color: 'rgb(6, 86, 65)' }}>ALREADY HAVE COVERAGE?</h5>
-        <h1 className="display-6 mb-5">Get to Know Your Policy</h1>
+        <h5 className="display-8 " style={{ color: "rgb(6, 86, 65)" }}>
+          ALREADY HAVE COVERAGE?
+        </h5>
+        <h1 className="display-6">Get to Know Your Policy</h1>
       </div>
 
-      <div className="container-fluid" data-wow-delay="0.1s" style={{ padding: 35, background: '#276c63', color: '#15233c', alignContent: "center" }}>
-        <div className="containere">
-          <div className="row g-2">
-            <div className="col-md-12">
-              <div className="row g-2">
-                <div className="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                  <select
-                    className="form-select border-0 py-3"
-                    style={{ backgroundColor: '#d6f1fe', color: '#15233c' }}
-                    value={country}
-                    onChange={changeCountry}
-                  >
-                    <option >Company</option>
-                    {countries.map((ctr) => (
-                      <option key={ctr.name} value={ctr.name}>
-                        {ctr.name}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+      <div
+        className="container-fluid header "
+        style={{ background: " #bdece6" }}
+      >
+        <div className="row policy-section align-items-center flex-column-reverse flex-md-row">
+  
+  <div className="col-md-6 policy-image">
+    <img
+      src={first}
+      alt="Policy Illustration"
+      className="policy-img"
+    />
+  </div>
 
-                <div className="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
-                  <select className="form-select border-0 py-3" style={{ backgroundColor: ' #d6f1fe', color: '#15233c' }}
-                    value={state} onChange={changeState}
-                  >
-                    <option selected>Insurance Type</option>
+  <div className="col-md-6 policy-content text-center text-md-start">
+    <h1 className="policy-title">
+      Understand the benefits of{" "}
+      <span>"Your Policy".</span>
+    </h1>
+    <p className="policy-text">
+      Explore the terms and conditions in simple, clear language.
+      Uncover the strengths, weaknesses, and missing features of your insurance plan.
+    </p>
+  </div>
 
-                    {/* {
-                      states.map(state=> (
-                        <option value={state.name}>{state.name}</option>
-                      ))
-                    } */}
+</div>
 
-                    {states.map((st) => (
-                      <option key={st.name} value={st.name}>
-                        {st.name}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-                <div className="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
-                  <select className="form-select border-0 py-3" style={{ backgroundColor: ' #d6f1fe', color: '#15233c' }}
-                    value={city} onChange={changeCity}>
-                    <option selected>Policy</option>
-                    {/* {
-                      cities.map(city => (
-                        <option value={city}>{city}</option>
-                      ))
-                    } */}
-
-                    {cities.map((ct) => (
-                      <option key={ct.name} value={ct.name}>
-                        {ct.name}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-            </div>
-            
-
-            {/* Product Details Section */}
-            {selectedProduct && (
-              <div
-                className="container mt-5 p-4"
-                style={{
-                  color: "white",
-                  background: "#276c63",
-                  borderRadius: "15px",
-                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
-                }}
-              >
-                <div className="text-center mb-4">
-                  <h2
-                    style={{
-                      color: "#15233c",
-                      background: "#d6f1fe",
-                      borderRadius: "15px",
-                      padding: "10px",
-                      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
-                    }}
-                  >
-                    {selectedProduct.heading}
-                  </h2>
-                </div>
-                <div className="row g-4 align-items-center">
-                  {/* Left column for description */}
-                  <div className="col-md-12" style={{
-                    color: "white",
-                    background: "#276c63",
-                    borderRadius: "15px",
-                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
-                    padding: "25px"
-                  }}>
-                    <h5 className="text-white">
-                      <strong className="text-dark"> PREAMBLE:-</strong> {selectedProduct.description}
-                    </h5>
-                    <h5 className="text-white">
-                      <strong className="text-dark"> BENEFITS:-</strong> {selectedProduct.benefits}
-                    </h5>
-                   
-                  </div>
-
-                  
-                </div>
-
-                {/* Bottom links */}
-                <div className="d-flex justify-content-center flex-wrap mt-4">
-                  <a
-                    href={selectedProduct.policyWordingUrl}
-                    className="btn btn-dark text-white me-2 mb-2"
-                    style={{
-                      borderRadius: "8px",
-                      minWidth: "150px",
-                      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
-                    }}
-                    target="_blank" // Opens in a new tab
-                  // Security best practices
-                  >
-
-                    Policy Wording
-                  </a>
-                  <a
-                    href={selectedProduct.brochureUrl}
-                    className="btn text-dark mb-2"
-                    style={{
-                      borderRadius: "8px",
-                      background: "#d6f1fe",
-                      minWidth: "150px",
-                      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
-                    }}
-                    target="_blank" // Opens in a new tab
-                    rel="noopener noreferrer" // Security best practices
-                  >
-                    View Policy Brochure
-                  </a>
-                </div>
-
-
-              </div>
-            )}
-
-
-
-          </div>
-        </div>
       </div>
-
-
-
-      <div className="container-fluid header  p-0 " style={{ background: ' #bdece6' }}>
-        <div className="row g-0 align-items-center flex-column-reverse flex-md-row">
-          <div className="col-md-6 animated wow fadeInUp" data-wow-delay="0.7s">
-            <img className="img-fluid" src={first} height="100px" width="600px" alt />
-          </div>
-
-          <div className="col-md-6 p-5 mt-lg-5 text-center">
-            <h1 className="display-5 animated wow fadeInUp mb-4" data-wow-delay="0.5s" >Understand the benefits of <span style={{ color: '#0a3e39' }}>"Your Policy". </span></h1>
-            <p className="animated fadeIn mb-4 pb-2 text-dark"> Explore the terms and conditions in simple, clear language. Uncover the strengths, weaknesses, and missing features of your insurance plan.
-            </p>
-          </div>
-
-        </div>
-      </div>
-
-
 
       {/* Live Search End  */}
-      <div className="container-xxl py-5">
+      {/* <div className="container-xxl py-5">
 
         <div className="container">
           <div className="text-center mx-auto" style={{ maxWidth: 500 }}>
@@ -886,25 +813,93 @@ Person will get the accrued continuity benefits in waiting periods as per IRDAI 
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+      {/* <div className="insurance-section">
+        <h2 className="title">Our Insurance Partners</h2>
+
+        <div className="marquee-container">
+          <div className="marquee-row left">
+            {[GCLOGO, HDFCERGO, CARE, GCLOGO, HDFCERGO, CARE].map((logo, i) => (
+              <div className="logo-card" key={i}>
+                <img src={logo} alt="partner" />
+              </div>
+            ))}
+          </div>
+
+          <div className="marquee-row right">
+            {[
+              ICICIlombard,
+              NIVBHUPA,
+              TATAAIG,
+              ICICIlombard,
+              NIVBHUPA,
+              TATAAIG,
+            ].map((logo, i) => (
+              <div className="logo-card" key={i}>
+                <img src={logo} alt="partner" />
+              </div>
+            ))}
+          </div>
+
+          <div className="marquee-row left slow">
+            {[IFFCO, LICLOGO, IFFCO, LICLOGO].map((logo, i) => (
+              <div className="logo-card" key={i}>
+                <img src={logo} alt="partner" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div> */}
+     <div className="insurance-section">
+  <h2 className="title">Our Insurance Partners</h2>
+
+  <div className="marquee-container">
+    {/* Row 1 - Left */}
+    <div className="marquee-row left">
+      {[GCLOGO, HDFCERGO, CARE, GCLOGO, HDFCERGO, CARE, GCLOGO, HDFCERGO].map((logo, i) => (
+        <div className="logo-card" key={`row1-${i}`}>
+          <img src={logo} alt="Insurance Partner" />
+        </div>
+      ))}
+    </div>
+
+    {/* Row 2 - Right */}
+    <div className="marquee-row right">
+      {[ICICIlombard, NIVBHUPA, TATAAIG, ICICIlombard, NIVBHUPA, TATAAIG, ICICIlombard, NIVBHUPA].map((logo, i) => (
+        <div className="logo-card" key={`row2-${i}`}>
+          <img src={logo} alt="Insurance Partner" />
+        </div>
+      ))}
+    </div>
+
+    {/* Row 3 - Left Slow */}
+    <div className="marquee-row left slow">
+      {[IFFCO, LICLOGO, IFFCO, LICLOGO, IFFCO, LICLOGO].map((logo, i) => (
+        <div className="logo-card" key={`row3-${i}`}>
+          <img src={logo} alt="Insurance Partner" />
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
       {/* Live WhatsApp Chat start  */}
-        <div className="livechat">
-        <a 
-          aria-label="Chat on WhatsApp" 
-          href="https://wa.me/919104105104?text= hello, I have a question "   
+      <div className="livechat">
+        <a
+          aria-label="Chat on WhatsApp"
+          href="https://wa.me/919104105104?text= hello, I have a question "
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img alt="Chat on WhatsApp" src={WhatsAppBtnn} className="whatsapp-icon" />
+          <img
+            alt="Chat on WhatsApp"
+            src={WhatsAppBtnn}
+            className="whatsapp-icon"
+          />
         </a>
       </div>
-      
-      
     </div>
   );
 }
 
 export default Company;
-
-
-

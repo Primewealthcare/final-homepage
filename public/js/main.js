@@ -35,7 +35,11 @@
         }
     });
     $('.back-to-top').click(function () {
+<<<<<<< HEAD
+        $('html, body').animate({scrollTop: 0}, 300, 'easeInOutExpo');
+=======
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+>>>>>>> a8a1a320e9f3772e1afea4e1fb049c139be61b59
         return false;
     });
 

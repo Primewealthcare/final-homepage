@@ -12,7 +12,8 @@ function Events() {
       <div className="container-xxl py-5">
   <div className="container">
     <div className="text-center mx-auto" style={{maxWidth: 500}}>
-      <h1 className="display-6 mb-5">Our Events </h1>
+      <h1 className="display-6 mb-5">Our Events</h1>
+
     </div>
     <div className="row">
       <div className="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -56,7 +57,8 @@ function Events() {
   <div className="livechat">
   <a 
     aria-label="Chat on WhatsApp" 
-    href="https://wa.me/919104105104?text= hello, I have a question "   
+    href="https://wa.me/919725655005?text= hello, I have a question "   
+
     target="_blank"
     rel="noopener noreferrer"
   >

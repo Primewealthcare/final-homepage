@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useEffect } from "react";
+=======
+import React from "react";
+>>>>>>> a8a1a320e9f3772e1afea4e1fb049c139be61b59
 import BHARATSINH from "../IMG/Leaders/BHARATSINH.svg"
 import MEHUL from "../IMG/Leaders/MEHUL.svg"
 import HITESHKHERADIYA from "../IMG/Leaders/HITESHKHERADIYA.svg"
@@ -11,10 +15,13 @@ import PIYUSHPANDYA from "../IMG/Leaders/PIYUSHPANDYA.svg"
 import WhatsAppBtnn from ".///../IMG/WhatsAppBtnn.png"
 
 function Team() {
+<<<<<<< HEAD
 
  
 
 
+=======
+>>>>>>> a8a1a320e9f3772e1afea4e1fb049c139be61b59
   return (
     <div style={{background: "#dcfcf4 "}} >
       {/* <!-- Back to Top --> */}
@@ -413,7 +420,11 @@ function Team() {
     <div className="livechat">
         <a 
           aria-label="Chat on WhatsApp" 
+<<<<<<< HEAD
           href="https://wa.me/919725655005?text= hello, I have a question "   
+=======
+          href="https://wa.me/919104105104?text= hello, I have a question "   
+>>>>>>> a8a1a320e9f3772e1afea4e1fb049c139be61b59
           target="_blank"
           rel="noopener noreferrer"
         >

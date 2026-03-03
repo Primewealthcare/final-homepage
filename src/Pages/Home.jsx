@@ -155,7 +155,7 @@ function Home() {
                   <img className="img-fluid" src={PARULPANDYA} alt />
                   <div className="text-center p-4">
                     <h5>Parul Pandya</h5>
-                    <span>Director test</span>
+                    <span>Director</span>
                   </div>
                   <div
                     style={{ background: "#dcfcf4" }}
@@ -230,6 +230,7 @@ function Home() {
                     </div>
                   </div>
                 </div>
+                
               </div>
             </div>
             <div className="testimonial-carousel owl-loaded owl-drag">

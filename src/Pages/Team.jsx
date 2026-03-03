@@ -232,50 +232,7 @@ function Team() {
                 </div>
               </div>
             </div>
-            {/* <div
-              className="col-lg-3 col-md-6 wow fadeInUp"
-              data-wow-delay="0.7s"
-            >
-              <div className="team-item rounded">
-                <img className="img-fluid" src={satish_jani } alt />
-                <div className="text-center p-4">
-                  <h5>Satish Jani</h5>
-                  <span> Assistant Director <br />
-                   (Vadodara) </span>
-                </div>
-                <div
-                  style={{ background: "#dcfcf4" }}
-                  className="team-text text-center p-4"
-                >
-                  <h5>Satish Jani</h5>
-                  <p>Assistant Director <br /> 
-                  (Vadodara)</p>
-                  <div className="d-flex justify-content-center">
-                    <a
-                      className="btn btn-square btn-light m-1"
-                      href="https://www.instagram.com/satishjani79?igsh=MXJwcjMwOWluaDI1cA%3D%3D&utm_source=qr"
-                      target="_blank"
-                    >
-                      <i className="fab fa-instagram" />
-                    </a>
-                    <a
-                      className="btn btn-square btn-light m-1"
-                      href="https://www.facebook.com/satish.jani.73/groups_member"
-                      target="_blank"
-                    >
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                    <a
-                      className="btn btn-square btn-light m-1"
-                      href="https://www.linkedin.com/in/satish-jani-16909a5a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                      target="_blank"
-                    >
-                      <i className="fab fa-linkedin-in" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div> */}
+           
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.7s"

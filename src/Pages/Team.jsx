@@ -12,9 +12,6 @@ import WhatsAppBtnn from ".///../IMG/WhatsAppBtnn.png"
 
 function Team() {
 
- 
-
-
   return (
     <div style={{background: "#dcfcf4 "}} >
       {/* <!-- Back to Top --> */}
@@ -413,7 +410,8 @@ function Team() {
     <div className="livechat">
         <a 
           aria-label="Chat on WhatsApp" 
-          href="https://wa.me/919725655005?text= hello, I have a question "   
+                                                                                                                                                                                                                                                                                                                href="https://wa.me/919725655005?text= hello, I have a question "   
+
           target="_blank"
           rel="noopener noreferrer"
         >

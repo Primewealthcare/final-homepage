@@ -194,6 +194,7 @@ function Contact() {
   <a 
     aria-label="Chat on WhatsApp" 
     href="https://wa.me/919725655005?text= hello, I have a question "   
+
     target="_blank"
     rel="noopener noreferrer"
   >

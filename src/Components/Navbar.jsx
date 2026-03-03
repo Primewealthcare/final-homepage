@@ -317,7 +317,7 @@ function Navbar() {
                   </a>
                 </div>
                 <a
-                  href="#"
+                  href="https://admin.primewealthcare.in"
                   className="btn"
                   target="_blank"
                   rel="noreferrer"
@@ -464,7 +464,7 @@ function Navbar() {
             </a>
 
             <a
-              href="#"
+              href="https://admin.primewealthcare.in"
               className="btn w-100 mt-3"
               target="_blank"
               rel="noreferrer"

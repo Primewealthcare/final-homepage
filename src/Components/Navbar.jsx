@@ -186,42 +186,6 @@ function Navbar() {
       </div>
 
       {/* Topbar End */}
-
-      {/* Minimalist Navbar Start */}
-      {/* <nav
-        className="navbar navbar-expand-lg navbar-light sticky-top"
-        style={{
-          backgroundColor: "transparent",
-          padding: "1rem 2rem",
-          transition: "all 0.3s ease",
-          borderBottom: scrolled ? "1px solid rgba(0, 0, 0, 0.05)" : "none",
-          backdropFilter: scrolled ? "blur(10px)" : "none",
-        }}
-      > */}
-      {/* <nav
-        className="navbar navbar-expand-lg navbar-light"
-        style={{
-          position: scrolled ? "fixed" : "absolute",
-          top: scrolled ? "0" : "48px",
-          left: 0,
-          right: 0,
-          zIndex: 1000,
-
-          background: scrolled
-            ? "rgba(255, 255, 255, 0.65)" 
-            : "transparent",
-
-          backdropFilter: scrolled ? "blur(14px) saturate(180%)" : "none",
-          WebkitBackdropFilter: scrolled ? "blur(14px) saturate(180%)" : "none",
-
-          borderBottom: scrolled ? "1px solid rgba(255,255,255,0.3)" : "none",
-
-          boxShadow: scrolled ? "0 8px 30px rgba(0,0,0,0.08)" : "none",
-
-          transition: "all 0.35s ease",
-          padding: "1rem 2rem",
-        }}
-      > */}
       <nav
         className={`navbar navbar-expand-lg 
     ${scrolled ? "scrolled" : ""} 
@@ -295,7 +259,6 @@ function Navbar() {
 
                         opacity: isDropdownOpen ? 1 : 0,
                         visibility: isDropdownOpen ? "visible" : "hidden",
-                        // pointerEvents: isDropdownOpen ? "auto" : "none",
                         transition: "all 0.45s ease",
                         marginTop: "0.75rem",
                         zIndex: 1000,
@@ -413,16 +376,16 @@ function Navbar() {
               top: "100%",
               left: "50%",
               transform: "translateX(-50%)",
-
               width: "100%",
-              maxWidth: "520px", // wider menu
+              maxWidth: "520px",
               padding: "20px 22px",
+              backgroundColor: "rgba(225,225,225,225)",
+              backdropFilter: "blur(14px)",
+              WebkitBackdropFilter: "blur(24px)",
 
-              backgroundColor: "#ecfdf5",
               border: "1px solid rgba(39,108,99,0.15)",
-              borderRadius: "5px", // low radius (minimal)
+              borderRadius: "10px",
               boxShadow: "0 12px 30px rgba(0,0,0,0.12)",
-
               marginTop: "6px",
               zIndex: 999,
             }}
@@ -502,7 +465,7 @@ function Navbar() {
 
             <a
               href="#"
-              className="btn w-100 mt-3" // 🔥 glass transparency
+              className="btn w-100 mt-3"
               target="_blank"
               rel="noreferrer"
               style={{

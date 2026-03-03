@@ -70,10 +70,11 @@ const ModernCarousel = () => {
         minHeight: "700px",
         overflow: "hidden",
         backgroundColor: "#1a1a1a",
+        color:"white"
       }}
     >
       {/* Slides Container */}
-      <div style={{ position: "relative", width: "100%", height: "100%" }}>
+      <div style={{ position: "relative", width: "100%", height: "100%",color:"white" }}>
         {slides.map((slide, index) => (
           <div
             key={index}
@@ -130,33 +131,8 @@ const ModernCarousel = () => {
               <div className="container carousel-content">
                 <div className="row">
                   <div className="col-12 col-lg-6">
-                    {/* <h1
-                      className={slide.theme === 'dark' ? 'text-light' : 'text-dark'}
-                      style={{
-                        fontSize: 'clamp(2rem, 5vw, 3.5rem)',
-                        fontWeight: 'bold',
-                        marginBottom: '1.5rem',
-                        opacity: index === currentSlide ? 1 : 0,
-                        transform: index === currentSlide ? 'translateY(0)' : 'translateY(40px)',
-                        transition: 'opacity 700ms ease-out 200ms, transform 700ms ease-out 200ms',
-                        textShadow: slide.theme === 'dark' ? '2px 2px 4px #000000' : 'none'
-                      }}
-                    >
-                      {slide.title}
-                    </h1>
-                    <p
-                      className={slide.theme === 'dark' ? 'text-light' : 'text-dark'}
-                      style={{
-                        fontSize: '1.25rem',
-                        marginBottom: '2rem',
-                        opacity: index === currentSlide ? 1 : 0,
-                        transform: index === currentSlide ? 'translateY(0)' : 'translateY(40px)',
-                        transition: 'opacity 700ms ease-out 400ms, transform 700ms ease-out 400ms'
-                      }}
-                    >
-                      {slide.subtitle}
-                    </p> */}
-                    <h1 className={`carousel-title ${slide.theme}`}>
+                   
+                    <h1 className={`carousel-title text-white ${slide.theme}`}>
                       {slide.title}
                     </h1>
 

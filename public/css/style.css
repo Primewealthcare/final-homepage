@@ -152,9 +152,6 @@ h6 {
   }
 }
 
-/*** Navbar ***/
-
-
 .navbar.sticky-top {
   top: -100px;
   transition: .5s;
@@ -162,12 +159,26 @@ h6 {
 
 
 .navbar {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.15); 
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.05)
+  );
+
   font-family: "Inter", "Poppins", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 500;
   letter-spacing: 0.2px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  padding: 12px 24px;
+  border-radius: 16px;
 }
 
 .navbar-nav {
@@ -216,9 +227,7 @@ h6 {
 /* ===== Mobile Hamburger Toggle (SMALLER) ===== */
 .mobile-toggle {
   width: 26px;
-  /* ⬅ smaller */
   height: 20px;
-  /* ⬅ smaller */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -238,7 +247,7 @@ h6 {
   transform-origin: center;
 }
 
-/* 🔁 Transform to X */
+/*Transform to X */
 .mobile-toggle.open span:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
 }
@@ -254,27 +263,32 @@ h6 {
 
 /* ===== FLOATING STATE ===== */
 .navbar.scrolled {
-  position: fixed;
-  top: 10px;
-  background: #ecfdf5;
-
-  border-radius: 5px;
-  padding: 10px 22px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  top: 4px;
+  width: 95%;
+  margin-top: 5px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* 📱 Mobile override */
+/* Mobile override */
 @media (max-width: 768px) {
   .navbar {
-    top: 4px;
-    /* Mobile */
-    width: 95%;
-    /* Optional: looks better on mobile */
-    background-color: #ecfdf5;
-    padding: 5px;
-    border-radius: 5px;
-    margin-top: 5px;
-  }
+  top: 4px;
+  width: 95%;
+  margin-top: 5px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
 }
 
 @keyframes navDrop {
@@ -293,7 +307,6 @@ h6 {
   width: 100%;
   margin-right: 15px;
   max-width: 1700px;
-  /* margin: 0 auto; */
   display: flex;
   align-items: center;
 }
@@ -337,7 +350,7 @@ h6 {
 }
 
 .navbar.scrolled .nav-link {
-  color: #0f766e;
+  color: red;
 }
 
 .navbar.scrolled .nav-link:hover {
